@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+
+}
+
+.left-part {
+    /* background-color: aqua; */
+    width: 50%;    
+    padding: 5em 6em;
+}
+
+.right-part{
+    /* background-color: red; */
+    background-image: url(/src/assets/image-login-2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 50%;
+    padding: 0em 12em;
+}
+
+.mac-image {
+    width: 200px;
+    height: 50px;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #2D2A54;
+}
+
+.h2-text-login {
+    width: 60%;
+}
+
+h2 {
+    font-size: 1em;
+    color: #2d2a54a1;
+}
+
+.input-login {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.input-email {
+    padding: 10px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    background-color: #D7D8F0;
+    border: solid #D7D8F0;
+}
+
+.input-pwd {
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #D7D8F0;
+    border: solid #D7D8F0;
+}
+
+.btn-login {
+    width: 450px;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid #2D2A54;
+    background-color: #2D2A54;
+    color: #D7D8F0;
+}
+
+.btn-login:hover {
+    border: solid #141230;
+    background-color: #141230;
+    color: #D7D8F0;
+    transition: .3s;
+}
+
+.text-register-login {
+    margin-top: 1em;
+    display: flex;
+    width: 450px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.txt-register,
+.log-register {
+    color: #2D2A54;
+}
+
+.txt-register {
+    margin-bottom: .5em;
+    font-weight: 500;
+}
+
+.log-register {
+    margin: 0;
+    text-decoration: none;
+    font-weight: 1000;    
+}
+
+.image-login{
+    height: 650px;
+    width: 100%;
+}

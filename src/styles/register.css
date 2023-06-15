@@ -6,36 +6,37 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.container {
+.container-register {
     display: flex;
 }
 
-.left-part {
+.left-part-register {
     /* background-color: aqua; */
-    height: 100%;
+    height: 100;
     width: 50%;    
     padding: 2em 5em;
+    background-color: #2D2A54;
 }
 
-.mac-image {
+.mac-image-register {
     width: 200px;
     height: 50px;
     margin-bottom: 4rem;
 }
 
-.h1-text-login {
+.h1-text-register {
     margin-bottom: 20px;
-    color: #2D2A54;
+    color: #D7D8F0;
 }
 
-.h2-text-login {
+.h2-text-register {
     width: 350px;
     margin-bottom: 40px;
     font-size: 1em;
-    color: #2d2a54a1;
+    color: #D7D8F0;
 }
 
-.input-login {
+.input-register {
     width: 450px;
     display: flex;
     flex-direction: column;
@@ -43,22 +44,22 @@
     margin-bottom: 30px;
 }
 
-.input-email {
+.input-email-register {
     padding: 10px;
     margin-bottom: 20px;
     border-radius: 10px;
-    background-color: #D7D8F0;
-    border: solid #D7D8F0;
+    background-color: white;
+    border: solid white;
 }
 
-.input-pwd {
+.input-pwd-register {
     padding: 10px;
     border-radius: 10px;
-    background-color: #D7D8F0;
-    border: solid #D7D8F0;
+    background-color: white;
+    border: solid white;
 }
 
-.btn-login {
+.btn-register {
     display: flex;
     width: 450px;
     flex-direction: column;
@@ -67,20 +68,20 @@
     margin-bottom: 20px;
     padding: 10px 0px;
     border-radius: 10px;
-    border: solid #2D2A54;
-    background-color: #2D2A54;
-    color: #D7D8F0;
+    border: solid #D7D8F0;
+    background-color: #D7D8F0;
+    color: #2D2A54;
 }
 
-.btn-login:hover {
-    border: solid #141230;
-    background-color: #141230;
-    color: #D7D8F0;
+.btn-register:hover {
+    border: solid #bcbcd4;
+    background-color: #bcbcd4;
+    color: #2D2A54;
     transition: .3s;
     cursor: pointer;
 }
 
-.text-register-login {
+.text-login-register {
     margin-top: 1em;
     display: flex;
     width: 450px;
@@ -88,38 +89,37 @@
     align-items: center;
 }
 
-.txt-register,
-.log-register {
-    color: #2D2A54;
+.txt-login,
+.register-login {
+    color: #D7D8F0;
 }
 
-.txt-register {
+.txt-login {
     margin-bottom: .5em;
     font-weight: 500;
     font-size: 1em;
 }
 
-.log-register {
+.register-login {
     margin: 0;
     text-decoration: none;
     font-weight: 1000;
     margin-top: 5px;
 }
 
-.log-register:hover{
-    color: #423e79;
+.register-login:hover{
+    color: #bcbcd4;
 }
 
-.right-part{
+.right-part-register{
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50%;
     height: 100vh;
-    background-color: #2D2A54;
 }
 
-.ilustration{
+.ilustration-register{
     width: 90%;
     height: 80%;
 }

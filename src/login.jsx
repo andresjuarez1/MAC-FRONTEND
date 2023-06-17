@@ -19,7 +19,7 @@ function Login() {
                 </div>
 
                 <div className="input-login">
-                    <input type="email" placeholder='Email' className='input-email' />
+                    <input type="email" placeholder='Email' className='input-email'/>
                     <input type="password" placeholder='Contraseña' className='input-pwd' />
                 </div>
 

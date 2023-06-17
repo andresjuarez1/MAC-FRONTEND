@@ -2,20 +2,30 @@ import { useState } from 'react'
 import React from 'react'
 import './styles/home.css';
 
-function Home() {
-    const [count, setCount] = useState(0)
-
+const Home = () => {
+    const [isOpen, setIsOpen] = useState(false);
+  
+    const toggleMenu = () => {
+      setIsOpen(!isOpen);
+    };
+  
     return (
-        <div className='container-home'>
-            <div className='side-bar-home'>
-
-            </div>
-    
-            <div className="image-home">
-                
-            </div>
-        </div>
-    )
-}
-
+      <div className="menu-container">
+        <button className={`menu-toggle ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
+          <span className="bar"></span>
+          <span className="bar"></span>
+          <span className="bar"></span>
+        </button>
+        {isOpen && (
+          <div className="menu">
+            <a href="/">Inicio</a>
+            <a href="/acerca">Acerca</a>
+            <a href="/servicios">Servicios</a>
+            <a href="/contacto">Contacto</a>
+          </div>
+        )}
+      </div>
+    );
+  };
+  
 export default Home;

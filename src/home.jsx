@@ -1,21 +1,24 @@
-import { useState } from 'react'
-import React from 'react'
+import { useState } from 'react';
+import React from 'react';
 import './styles/home.css';
 
 const Home = () => {
-    const [isOpen, setIsOpen] = useState(false);
-  
-    const toggleMenu = () => {
-      setIsOpen(!isOpen);
-    };
-  
-    return (
-      <div className="menu-container">
-        <button className={`menu-toggle ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
-          <span className="bar"></span>
-          <span className="bar"></span>
-          <span className="bar"></span>
-        </button>
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <div className="container">
+      <div className="hamburger-menu">
+        <div className={`menu-container ${isOpen ? 'open' : ''}`}>
+          <button className="menu-toggle" onClick={toggleMenu}>
+            <span className={`bar ${isOpen ? 'open' : ''}`}></span>
+            <span className={`bar ${isOpen ? 'open' : ''}`}></span>
+            <span className={`bar ${isOpen ? 'open' : ''}`}></span>
+          </button>
+        </div>
         {isOpen && (
           <div className="menu">
             <a href="/">Inicio</a>
@@ -25,7 +28,8 @@ const Home = () => {
           </div>
         )}
       </div>
-    );
-  };
-  
+    </div>
+  );
+};
+
 export default Home;

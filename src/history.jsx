@@ -1,7 +1,7 @@
 import React from 'react';
 import Hamburger from './hamburger-menu';
 
-const Contamination = () => {
+const History = () => {
   return (
     <div className="container">
       <Hamburger />
@@ -20,4 +20,4 @@ const Contamination = () => {
   );
 };
 
-export default Contamination;
+export default History;

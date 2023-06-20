@@ -12,7 +12,6 @@ const Hamburger = () => {
   return (
     <div className="container-hamburger">
       <div className={`hamburger-menu ${isOpen ? 'open' : ''}`}>
-        <div className="menu-container">
           <button className={`menu-toggle ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
             {isOpen ? (
               <>
@@ -26,18 +25,17 @@ const Hamburger = () => {
               </>
             )}
           </button>
-        </div>
         {isOpen && (
           <div className="menu">
             <div className="contamination-icon">
               <img src="src/assets/contamination-icon.svg" alt="Contamination Icon" className="contamination-image" />
-              <a href="/" className="contamination-txt">
+              <a href="/contamination" className="contamination-txt">
                 Contaminación
               </a>
             </div>
             <div className="register-icon">
               <img src="src/assets/register-icon.svg" alt="Register Icon" className="register-image" />
-              <a href="/" className="register-txt">
+              <a href="/history" className="register-txt">
                 Registro
               </a>
             </div>
@@ -47,6 +45,14 @@ const Hamburger = () => {
                 Pronostico
               </a>
             </div>
+
+            <div className="preassure-icon">
+              <img src="src/assets/register-icon.svg" alt="Register Icon" className="preassure-image" />
+              <a href="/history" className="preassure-txt">
+                Presión
+              </a>
+            </div>
+
           </div>
         )}
       </div>

@@ -6,17 +6,40 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.container{
+.container {
+    position: relative;
+    /* Añadir posición relativa al contenedor */
     background-image: url('../assets/image-login-2.png');
     background-repeat: no-repeat;
     height: 100vh;
+    width: 100%;
+}
+
+.description {
+    position: absolute;
+    width: 750px;
+    height: 100px;
+    left: 287px;
+    top: 350px;
+    background: #D7D8F0;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
 }
 
-.city{
-    width: 780px;
-    display: flex;
-    justify-content: center;
-    color: white;
-    margin-top: 50px;
+.viento{
+    height: 20px;
+    width: 20px;
+}
+
+.humedad{
+    height: 20px;
+    width: 20px;
+}
+
+.altura{
+    height: 20px;
+    width: 20px;
 }

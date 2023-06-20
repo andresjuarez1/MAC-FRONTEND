@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 .container-hamburger{
     width: 290px;
 }
@@ -5,15 +9,11 @@
 .menu-container {
     display: flex;
     z-index: 1;
-    margin: 20px;
+    margin: 0px;
 }
 
 .menu-container.open {
     background-color: #2d2a54af;
-    transition: 1s;
-    width: 290px;
-    margin: 0;
-    
 }
 
 .menu-toggle {
@@ -24,8 +24,25 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 10px;
+    margin: 10px;
     width: 50px;
     height: 45px;
+}
+
+.menu-toggle.open{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 270px;
+    background-color: #2d2a54af;
+}
+
+.mac-icon-home{
+    height: 100px;
+    width: 200px;
+    background-color: #2d2a54af;
+    margin-top: 20px;
 }
 
 /* .menu-toggle.open .bar {
@@ -47,7 +64,7 @@
     display: flex;
     flex-direction: column;
     width: 270px;
-    height: 87vh;
+    height: 93vh;
 }
 
 .menu a {
@@ -56,13 +73,6 @@
     font-size: 18px;
     margin-bottom: 10px;
     text-decoration: none;
-}
-
-.mac-icon-home{
-    height: 100px;
-    width: 200px;
-    background-color: #2d2a54af;
-    margin: 0px;
 }
 
 .contamination-icon{
@@ -84,7 +94,7 @@
 .contamination-icon:hover{
     transition: .3s;
     background-color: #6761c2af;
-    padding: 15px 0px;
+    /* padding: 15px 0px; */
 }
 
 
@@ -107,7 +117,7 @@
 .register-icon:hover{
     transition: .3s;
     background-color: #6761c2af;
-    padding: 15px 0px;
+    /* padding: 15px 0px; */
 }
 
 .pronostico-icon{
@@ -132,5 +142,31 @@
 .pronostico-icon:hover{
     transition: .3s;
     background-color: #6761c2af;
-    padding: 15px 0px;
+    /* padding: 15px 0px; */
+}
+
+
+.preassure-icon{
+    margin-top: 60px;
+}
+
+.preassure-icon{
+    display: flex;
+    flex-direction: row; 
+}
+
+.preassure-image{
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+.preassure-txt{
+    margin: 17px 10px;
+}
+
+.preassure-icon:hover{
+    transition: .3s;
+    background-color: #6761c2af;
+    /* padding: 15px 0px; */
 }

@@ -3,7 +3,6 @@
 }
 
 .menu-container {
-    width: 290px;
     display: flex;
     z-index: 1;
     margin: 20px;
@@ -11,8 +10,10 @@
 
 .menu-container.open {
     background-color: #2d2a54af;
-    /* transition: .1s; */
+    transition: 1s;
+    width: 290px;
     margin: 0;
+    
 }
 
 .menu-toggle {
@@ -25,13 +26,11 @@
     padding: 10px;
     width: 50px;
     height: 45px;
-    z-index: 2;
-    
 }
 
-.menu-toggle.open .bar {
+/* .menu-toggle.open .bar {
     background-color: transparent;
-}
+} */
 
 .bar {
     background-color: white;
@@ -40,19 +39,15 @@
 }
 
 .bar.open {
-    background-color: aqua;
+    background-color: transparent;
 }
 
 .menu {
     background-color: #2d2a54af;
     display: flex;
     flex-direction: column;
-    padding: 20px;
-    position: absolute;
-    left: 0;
-    width: 290px;
-    z-index: 1;
-    height: 93vh;
+    width: 270px;
+    height: 87vh;
 }
 
 .menu a {
@@ -63,51 +58,79 @@
     text-decoration: none;
 }
 
+.mac-icon-home{
+    height: 100px;
+    width: 200px;
+    background-color: #2d2a54af;
+    margin: 0px;
+}
+
 .contamination-icon{
     margin-top: 80px;
-    margin-bottom: 40px;
     display: flex;
-    flex-direction: row;   
+    flex-direction: row;
 }
 
 .contamination-image{
     width: 50px;
     height: 50px;
-    fill: white;
+    margin-left: 20px;
 }
 
 .contamination-txt{
     margin: 17px 10px;
 }
 
+.contamination-icon:hover{
+    transition: .3s;
+    background-color: #6761c2af;
+    padding: 15px 0px;
+}
+
+
 .register-icon{
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row; 
 }
 
 .register-image{
     width: 50px;
     height: 50px;
+    margin-left: 20px;
 }
 
 .register-txt{
     margin: 17px 10px;
 }
 
-.pronostico-icon{
-    margin-top: 40px;
+.register-icon:hover{
+    transition: .3s;
+    background-color: #6761c2af;
+    padding: 15px 0px;
 }
 
 .pronostico-icon{
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 60px;
+}
+
+.pronostico-icon{
+    display: flex;
+    flex-direction: row; 
 }
 
 .pronostico-image{
+    margin-left: 20px;
     width: 50px;
     height: 50px;
 }
 
-.productos-txt{
+.pronostico-txt{
     margin: 17px 10px;
+}
+
+.pronostico-icon:hover{
+    transition: .3s;
+    background-color: #6761c2af;
+    padding: 15px 0px;
 }

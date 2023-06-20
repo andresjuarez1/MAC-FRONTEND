@@ -1,0 +1,113 @@
+.container-hamburger{
+    width: 290px;
+}
+
+.menu-container {
+    width: 290px;
+    display: flex;
+    z-index: 1;
+    margin: 20px;
+}
+
+.menu-container.open {
+    background-color: #2d2a54af;
+    /* transition: .1s; */
+    margin: 0;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    width: 50px;
+    height: 45px;
+    z-index: 2;
+    
+}
+
+.menu-toggle.open .bar {
+    background-color: transparent;
+}
+
+.bar {
+    background-color: white;
+    height: 3px;
+    width: 100%;
+}
+
+.bar.open {
+    background-color: aqua;
+}
+
+.menu {
+    background-color: #2d2a54af;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    position: absolute;
+    left: 0;
+    width: 290px;
+    z-index: 1;
+    height: 93vh;
+}
+
+.menu a {
+    color: #fff;
+    overflow: hidden;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.contamination-icon{
+    margin-top: 80px;
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;   
+}
+
+.contamination-image{
+    width: 50px;
+    height: 50px;
+    fill: white;
+}
+
+.contamination-txt{
+    margin: 17px 10px;
+}
+
+.register-icon{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.register-image{
+    width: 50px;
+    height: 50px;
+}
+
+.register-txt{
+    margin: 17px 10px;
+}
+
+.pronostico-icon{
+    margin-top: 40px;
+}
+
+.pronostico-icon{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.pronostico-image{
+    width: 50px;
+    height: 50px;
+}
+
+.productos-txt{
+    margin: 17px 10px;
+}

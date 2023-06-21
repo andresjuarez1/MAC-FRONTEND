@@ -35,22 +35,16 @@ const Hamburger = () => {
             </div>
             <div className="register-icon">
               <img src="src/assets/register-icon.svg" alt="Register Icon" className="register-image" />
-              <a href="/history" className="register-txt">
-                Registro
-              </a>
+              <a href="/history" className="register-txt">Registro</a>
             </div>
             <div className="pronostico-icon">
               <img src="src/assets/pronostico-icon.svg" alt="Pronostico Icon" className="pronostico-image" />
-              <a href="/" className="pronostico-txt">
-                Pronostico
-              </a>
+              <a href="/" className="pronostico-txt">Pronostico</a>
             </div>
 
             <div className="preassure-icon">
               <img src="src/assets/register-icon.svg" alt="Register Icon" className="preassure-image" />
-              <a href="/history" className="preassure-txt">
-                Presión
-              </a>
+              <a href="/history" className="preassure-txt">Presión</a>
             </div>
 
           </div>

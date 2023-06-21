@@ -1,5 +1,4 @@
 import React from 'react';
-import Hamburger from './hamburger-menu';
 
 const Pronostico = () => {
   return (

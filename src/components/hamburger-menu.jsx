@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import React from 'react';
-import './styles/hamburger.css';
+import '../styles/hamburger.css';
 
 const Hamburger = () => {
   const [isOpen, setIsOpen] = useState(false);

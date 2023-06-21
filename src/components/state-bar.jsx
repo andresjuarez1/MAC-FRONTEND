@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles/stateBar.css';
+import '../styles/stateBar.css';
 
 const Barra = () => {
     return (

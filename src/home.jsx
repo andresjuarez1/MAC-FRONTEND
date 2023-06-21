@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles/home.css';
-import Hamburger from './hamburger-menu';
-import Barra from './state-bar';
+import Hamburger from './components/hamburger-menu';
+import Barra from './components/state-bar';
 
 const Home = () => {
   return (

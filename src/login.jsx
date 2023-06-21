@@ -3,7 +3,6 @@ import React from 'react'
 import MAC from './assets/mac-login.png'
 import Ilustration from './assets/ilustration-log.png'
 import './styles/login.css';
-import { Link } from 'react-router-dom'
 
 function Login() {
     const [count, setCount] = useState(0)

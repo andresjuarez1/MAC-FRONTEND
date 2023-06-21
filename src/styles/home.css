@@ -55,13 +55,18 @@
     font-weight: 100;
 }
 
-.cards{
-    width: 100%;
+.container-cards{
+    width: 800px;
     display: flex;
-    position: absolute;
     justify-content: center;
-    gap: 100px;
+    position: absolute;
     top: 475px;
+    left: 270px;
+}
+
+.cards{
+    display: flex;
+    gap: 100px;
     margin-bottom: 50px;
 }
 
@@ -147,9 +152,9 @@
 }
 
 .login-home-icon{
-    width: 100%;
     display: flex;
-    justify-content: end;
+    position: absolute;
+    left: 1210px;
     margin: 20px;  
 }
 

@@ -97,11 +97,11 @@
     /* padding: 15px 0px; */
 }
 
-
 .register-icon{
     margin-top: 60px;
+    width: 270px;
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
 }
 
 .register-image{
@@ -122,9 +122,6 @@
 
 .pronostico-icon{
     margin-top: 60px;
-}
-
-.pronostico-icon{
     display: flex;
     flex-direction: row; 
 }

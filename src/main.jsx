@@ -19,8 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/contamination' element={<History />} />
         <Route path='/history' element={<Contamination />} />
         <Route path='/pronostico' element={<Pronostico />} />
-
-      </Routes>    
+      </Routes>
     </BrowserRouter>
 
   </React.StrictMode>,

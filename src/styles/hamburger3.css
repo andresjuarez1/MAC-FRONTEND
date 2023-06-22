@@ -1,0 +1,172 @@
+/* 
+.container-hamburger{
+    width: 100px;
+} */
+
+.menu-container3 {
+    display: flex;
+    z-index: 1;
+    margin: 0px;
+}
+
+.menu-container3.open {
+    background-color: #2d2a54af;
+}
+
+.menu-toggle3 {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+    width: 50px;
+    height: 45px;
+    /* transition: 1s; todavia no definido */
+    
+}
+
+.menu-toggle3.open{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 270px;
+    background-color: #2d2a54;
+    height: 10vh;
+}
+
+.mac-icon-home3{
+    height: 50px;
+    width: 200px;
+    /* background-color: #2d2a54af; */
+    margin-top: 20px;
+}
+
+/* .menu-toggle.open .bar {
+    background-color: transparent;
+} */
+
+.bar3 {
+    background-color: #2d2a54;
+    height: 3px;
+    width: 100%;
+}
+
+.bar3.open {
+    background-color: transparent;
+}
+
+.menu3 {
+    background-color: #2d2a54;
+    display: flex;
+    flex-direction: column;
+    width: 270px;
+    height: 90vh;
+    position: absolute;
+}
+
+.menu3 a {
+    color: #fff;
+    overflow: hidden;
+    font-size: 18px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    
+}
+
+.contamination-icon3{
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+}
+
+.contamination-image3{
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+}
+
+.contamination-txt3{
+    margin: 17px 10px;
+}
+
+.contamination-icon3:hover{
+    transition: .3s;
+    background-color: #6761c2af;
+    /* padding: 15px 0px; */
+}
+
+.register-icon3{
+    margin-top: 60px;
+    width: 270px;
+    display: flex;
+    flex-direction: row;
+}
+
+.register-image3{
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+}
+
+.register-txt3{
+    margin: 17px 10px;
+}
+
+.register-icon3:hover{
+    transition: .3s;
+    background-color: #6761c2af;
+    /* padding: 15px 0px; */
+}
+
+.pronostico-icon3{
+    margin-top: 60px;
+    display: flex;
+    flex-direction: row; 
+}
+
+.pronostico-image3{
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+.pronostico-txt3{
+    margin: 17px 10px;
+}
+
+.pronostico-icon3:hover{
+    transition: .3s;
+    background-color: #6761c2af;
+    /* padding: 15px 0px; */
+}
+
+
+.preassure-icon3{
+    margin-top: 60px;
+}
+
+.preassure-icon3{
+    display: flex;
+    flex-direction: row; 
+}
+
+.preassure-image3{
+    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+.preassure-txt3{
+    margin: 17px 10px;
+}
+
+.preassure-icon3:hover{
+    transition: .3s;
+    background-color: #6761c2af;
+    /* padding: 15px 0px; */
+}
+

@@ -65,8 +65,14 @@
     flex-direction: column;
     width: 270px;
     height: 90vh;
-    position: absolute;
 }
+
+.container-hamburger3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
 
 .menu3 a {
     color: #fff;

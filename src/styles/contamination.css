@@ -1,0 +1,101 @@
+:root{
+    --main-color: white;
+    --blue-color: #2d2a54;
+    --blue2-color: #dddbfa;
+}
+
+.contamination-container-title{
+    width: 100%;
+    height: 17vh;
+    background-color: var(--main-color);
+    display: flex;
+}
+
+.container-title{
+    width: 60%;
+    left: 400px;
+    height: 7vh;
+    margin-top: 20px;
+    position: absolute;
+}
+
+.contamination-title{
+    color: var(--blue-color);
+}
+
+.header-contamination{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.left-part-contamination{
+    margin-left: 100px;
+    width: 40%;
+}
+
+.left-txt-contamination{
+    margin-top: 20px;
+}
+
+.left-txt-contamination2{
+    color: #37B541;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 60px;
+}
+
+.right-part-contamination{
+    width: 40%;
+    /* margin-right: 100px; */
+}
+
+.contamination-header-img{
+    height: 50vh;
+}
+
+.graficas{
+    margin: 50px auto;
+    width: 80%;
+    height: 100vh;
+    border-radius: 40px;
+    background-color: var(--blue2-color);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.grafica-1{
+    margin: 20px auto;
+    width: 450px;
+    height: 230px;
+}
+
+.grafica1-txt{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.grafica2-txt{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.grafica3-txt{
+    text-align: center;
+}
+
+.grafica4-txt{
+    text-align: center;
+}
+
+.footer-contamination{
+    width: 700px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+.txt-footer-contamination{
+    color: red;
+    text-align: center;
+}

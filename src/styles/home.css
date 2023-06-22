@@ -60,14 +60,13 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 475px;
+    top: 465px;
     left: 270px;
 }
 
 .cards{
     display: flex;
     gap: 100px;
-    margin-bottom: 50px;
 }
 
 .card1{

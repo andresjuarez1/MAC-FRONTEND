@@ -3,17 +3,17 @@
     width: 100px;
 } */
 
-.menu-container {
+.menu-container2 {
     display: flex;
     z-index: 1;
     margin: 0px;
 }
 
-.menu-container.open {
+.menu-container2.open {
     background-color: #2d2a54af;
 }
 
-.menu-toggle {
+.menu-toggle2 {
     background: none;
     border: none;
     cursor: pointer;
@@ -24,19 +24,23 @@
     margin: 10px;
     width: 50px;
     height: 45px;
+    /* transition: 1s; todavia no definido */
+    
 }
 
-.menu-toggle.open{
+.menu-toggle2.open{
     display: flex;
     align-items: center;
     margin: 0;
     padding: 0;
     width: 270px;
-    background-color: #2d2a54af;
+    background-color: #2d2a54;
+    height: 10vh;
+    
 }
 
-.mac-icon-home{
-    height: 100px;
+.mac-icon-home2{
+    height: 50px;
     width: 200px;
     /* background-color: #2d2a54af; */
     margin-top: 20px;
@@ -46,121 +50,124 @@
     background-color: transparent;
 } */
 
-.bar {
-    background-color: white;
+.bar2 {
+    background-color: #2d2a54;
     height: 3px;
     width: 100%;
 }
 
-.bar.open {
+.bar2.open {
     background-color: transparent;
 }
 
-.menu {
-    background-color: #2d2a54af;
+.menu2 {
+    background-color: #2d2a54;
     display: flex;
     flex-direction: column;
     width: 270px;
-    height: 580px;
+    height: 190vh;
+    position: absolute;
 }
 
-.menu a {
+.menu2 a {
     color: #fff;
     overflow: hidden;
     font-size: 18px;
     margin-bottom: 10px;
     text-decoration: none;
+    
 }
 
-.contamination-icon{
+.contamination-icon2{
     margin-top: 80px;
     display: flex;
     flex-direction: row;
 }
 
-.contamination-image{
+.contamination-image2{
     width: 50px;
     height: 50px;
     margin-left: 20px;
 }
 
-.contamination-txt{
+.contamination-txt2{
     margin: 17px 10px;
 }
 
-.contamination-icon:hover{
+.contamination-icon2:hover{
     transition: .3s;
     background-color: #6761c2af;
     /* padding: 15px 0px; */
 }
 
-.register-icon{
+.register-icon2{
     margin-top: 60px;
     width: 270px;
     display: flex;
     flex-direction: row;
 }
 
-.register-image{
+.register-image2{
     width: 50px;
     height: 50px;
     margin-left: 20px;
 }
 
-.register-txt{
+.register-txt2{
     margin: 17px 10px;
 }
 
-.register-icon:hover{
+.register-icon2:hover{
     transition: .3s;
     background-color: #6761c2af;
     /* padding: 15px 0px; */
 }
 
-.pronostico-icon{
+.pronostico-icon2{
     margin-top: 60px;
     display: flex;
     flex-direction: row; 
 }
 
-.pronostico-image{
+.pronostico-image2{
     margin-left: 20px;
     width: 50px;
     height: 50px;
 }
 
-.pronostico-txt{
+.pronostico-txt2{
     margin: 17px 10px;
 }
 
-.pronostico-icon:hover{
+.pronostico-icon2:hover{
     transition: .3s;
     background-color: #6761c2af;
     /* padding: 15px 0px; */
 }
 
 
-.preassure-icon{
+.preassure-icon2{
     margin-top: 60px;
 }
 
-.preassure-icon{
+.preassure-icon2{
     display: flex;
     flex-direction: row; 
 }
 
-.preassure-image{
+.preassure-image2{
     margin-left: 20px;
     width: 50px;
     height: 50px;
 }
 
-.preassure-txt{
+.preassure-txt2{
     margin: 17px 10px;
 }
 
-.preassure-icon:hover{
+.preassure-icon2:hover{
     transition: .3s;
     background-color: #6761c2af;
     /* padding: 15px 0px; */
 }
+

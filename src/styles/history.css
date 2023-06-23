@@ -1,9 +1,12 @@
 :root{
     --card-color: #aab3ff8c;
+    --main-color: white;
+    --container-color: #3456ffb7;
 }
 
 .history{
     width: 100%;
+    
     height: 90vh;
 }
 
@@ -20,20 +23,22 @@
 }
 
 .container-content{
-    width: 85%;
-    height: 85vh;
-    background-color: #3455FF;
-    margin-top: 60px;
-    border-radius: 30px;
+    width: 100%;
+    height: 88.8vh;
+    background-image: url(../assets/image-login-2.png);
+    background-size: cover;
+    /* background-color: var(--container-color); */
+    margin-top: 70px;
+    /* border-radius: 30px; */
     overflow: hidden;
     position: absolute;
-    left: 100px;
+    /* left: 160px; */
 }
 
 .content-history{
     display: grid;
     width: 100%;
-    height: 500px;
+    height: 530px;
     margin: 10px auto;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -47,35 +52,118 @@
     background-color: var(--card-color);
     grid-area: n1;
     margin: 10px 0px 0px 30px;
-    border-radius: 10px;
+    border-radius: 30px;
+}
+
+.header-card-main{
     display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title-history{
+    color: var(--main-color);
+    margin-top: 20px;
+}
+
+.subtitle-history{
+    color: var(--main-color);
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .cloud-card-main{
     width: 200px;
     height: 170px;
-    margin-top: 120px;
+    margin-left: 80px;
+}
+
+.content-card-main{
+    display: flex;
+    margin-top: 20px;
+}
+
+.temperature-card-main{
+    color: var(--main-color);
+    font-size: 6em;
+    font-weight: 400;
+    margin-left: 70px;
+    margin-top: 60px;
+}
+
+.temperatura-footer{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.temperatura-main-footer{
+    margin-bottom: 20px;
+    color: var(--main-color);
+}
+
+.temperatura2-main-footer{
+    color: var(--main-color);
 }
 
 .card-history1{
     background-color: var(--card-color);
     grid-area: n2;
-    margin: 10px 20px;
+    margin: 10px 0px 0px 20px;
     border-radius: 20px;
+}
+
+.cards-title-header{
+    margin-top: 10px;
+}
+
+.temperature-cards-title{
+    color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.temperature-content-card{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.left-part-cards{
+    width: 50%;
+}
+
+.right-part-cards{
+    width: 50%;
+}
+
+.cloud-cards-img{
+    width: 100px;
+    height: 80px;
+    margin-left: 30px;
+}
+
+.temperature-card-txt{
+    color: var(--main-color);
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-top: 15px;
 }
 
 .card-history2{
     background-color: var(--card-color);
     grid-area: n3;
-    margin: 10px 20px;
+    margin: 10px 10px 0px 20px;
     border-radius: 20px;
-
 }
 
 .card-history3{
     background-color:var(--card-color);
     grid-area: n4;
-    margin: 10px 20px;
+    margin: 10px 0px 0px 20px;
     border-radius: 20px;
 
 }
@@ -83,7 +171,7 @@
 .card-history4{
     background-color: var(--card-color);
     grid-area: n5;
-    margin: 10px 20px;
+    margin: 10px 10px 0px 20px;
     border-radius: 20px;
 
 }
@@ -91,7 +179,7 @@
 .card-history5{
     background-color: var(--card-color);
     grid-area: n6;
-    margin: 10px 20px;
+    margin: 10px 0px 0px 20px;
     border-radius: 20px;
 
 }
@@ -99,7 +187,7 @@
 .card-history6{
     background-color: var(--card-color);
     grid-area: n7;
-    margin: 10px 20px;
+    margin: 10px 10px 0px 20px;
     border-radius: 20px;
 
 }

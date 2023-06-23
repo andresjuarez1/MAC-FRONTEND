@@ -1,0 +1,156 @@
+:root{
+    --container-color: rgba(0, 0, 0, 0.425);
+    --container2-color: rgba(255, 255, 255, 0.219);
+}
+
+.container-content-pronostico{
+    background-image: url(../assets/pronostico-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+
+.container-pronostico-cards{
+    width: 95%;
+    height: 90vh;
+    position: absolute;
+    top: 55px;
+    left: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "n1 n1 n1 n2"
+    "n1 n1 n1 n2"
+    "n1 n1 n1 n3";
+}
+
+.left-part-pronostico{
+    background-color: var(--container-color);
+    grid-area: n1;
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.right-part-pronostico{
+    background-color: var(--container-color);
+    grid-area: n2;
+    margin: 20px 20px 10px 0px;
+    border-radius: 10px;
+}
+
+.cards-pronostico{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "r1 r2 r3"
+    "r4 r5 r6"
+    "r7 r8 r9";
+    gap: 20px;
+}
+
+.card1-pronostico{
+    grid-area: r1;
+    background-color: var(--container2-color);
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.card2-pronostico{
+    grid-area: r2;
+    background-color: var(--container2-color);
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px; 
+    border-radius: 10px;
+    display: flex;
+}
+
+.card3-pronostico{
+    grid-area: r3;
+    background-color: var(--container2-color);
+    margin-top: 20px;
+    margin-right: 20px; 
+    border-radius: 10px;
+    display: flex;
+}
+
+.card4-pronostico{
+    grid-area: r4;
+    background-color: var(--container2-color);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    border-radius: 10px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.card5-pronostico{
+    grid-area: r5;
+    background-color: var(--container2-color);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px; 
+    border-radius: 10px;
+    display: flex;
+}
+
+.card6-pronostico{
+    grid-area: r6;
+    background-color: var(--container2-color);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    margin-right: 20px; 
+    display: flex;
+}
+
+.card7-pronostico{
+    grid-area: r7;
+    background-color: var(--container2-color);
+    margin-bottom: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.card8-pronostico{
+    grid-area: r8;
+    background-color: var(--container2-color);
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px; 
+    border-radius: 10px;
+    display: flex;
+}
+
+.card9-pronostico{
+    grid-area: r9;
+    background-color: var(--container2-color);
+    margin-bottom: 20px;
+    margin-right: 20px; 
+    border-radius: 10px;
+    display: flex;
+}
+
+.cloud-pronostico{
+    height: 80px;
+    width: 90px;
+    margin-top: 25px;
+    margin-left: 30px;
+}
+
+.card-pronostico-txt{
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}

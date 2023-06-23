@@ -1,5 +1,6 @@
 :root{
     --card-color: #aab3ff8c;
+    --card-hover-color: #4852b1;
     --main-color: white;
     --container-color: #3456ffb7;
 }
@@ -189,5 +190,39 @@
     grid-area: n7;
     margin: 10px 10px 0px 20px;
     border-radius: 20px;
+}
 
+.card-history-main:hover{
+    background-color: var(--card-hover-color);
+    transition: .5s;
+}
+
+.card-history1:hover{
+    background-color: var(--card-hover-color);
+    transition: .5s;
+}
+
+.card-history2:hover{
+    background-color: var(--card-hover-color);
+    transition: .5s;
+}
+
+.card-history3:hover{
+    background-color: var(--card-hover-color);
+    transition: .5s;
+}
+
+.card-history4:hover{
+    background-color: var(--card-hover-color);
+    transition: .5s;
+}
+
+.card-history5:hover{
+    background-color: var(--card-hover-color);
+    transition: .5s;
+}
+
+.card-history6:hover{
+    background-color: var(--card-hover-color);
+    transition: .5s;
 }

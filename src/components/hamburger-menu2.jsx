@@ -39,7 +39,7 @@ const Hamburger2 = () => {
             </div>
             <div className="pronostico-icon2">
               <img src="src/assets/pronostico-icon.svg" alt="Pronostico Icon" className="pronostico-image2" />
-              <a href="/" className="pronostico-txt2">Pronostico</a>
+              <a href="/pronostico" className="pronostico-txt2">Pronostico</a>
             </div>
 
             <div className="preassure-icon2">

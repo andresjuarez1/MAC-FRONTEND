@@ -2,6 +2,7 @@
     --main-color: white;
     --blue-color: #2d2a54;
     --blue2-color: #d7d4ff;
+    --blue3-color: #4de9fd80;
     --container-color: #3456ffb7;
 }
 
@@ -26,7 +27,11 @@
 
 .header-contamination{
     display: flex;
-    margin-bottom: 40px;
+    margin: 0 auto;
+    width: 80%;
+    height: 55vh;
+    border-radius: 50px;
+    background-color: var(--blue3-color);
 }
 
 .left-part-contamination{
@@ -35,7 +40,7 @@
 }
 
 .left-txt-contamination{
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .left-txt-contamination2{
@@ -48,6 +53,7 @@
 .right-part-contamination{
     width: 40%;
     /* margin-right: 100px; */
+    margin-top: 15px;
 }
 
 .contamination-header-img{
@@ -55,7 +61,7 @@
 }
 
 .graficas{
-    margin: 50px auto;
+    margin: 20px auto;
     width: 80%;
     height: 100vh;
     border-radius: 40px;
@@ -103,7 +109,7 @@
 
 .home-icon{
     display: flex;
-    position: absolute;
+    position: fixed;
     left: 1235px;
     margin: 15px;  
 }

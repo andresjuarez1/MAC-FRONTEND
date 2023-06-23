@@ -7,6 +7,9 @@ import LinesChart from './components/linesChart';
 const Contamination = () => {
   return (
     <div className="con">
+      <div className="home-icon">
+        <a href="/home" className="home-icon-img"></a>
+      </div>
       <div className='contamination-father'>
         <div className="contamination-container-title">
           <Hamburger2 />
@@ -63,14 +66,11 @@ const Contamination = () => {
       </div>
 
       <div className="footer-contamination">
-        <h2 className="txt-footer-contamination">EN CASO DE QUE LOS NIVELES DE CONTAMINACIÓN SEAN MUY ALTOS 
-        SE LANZARÁ UNA ALERTA</h2>
+        <h2 className="txt-footer-contamination">EN CASO DE QUE LOS NIVELES DE CONTAMINACIÓN SEAN MUY ALTOS
+          SE LANZARÁ UNA ALERTA</h2>
       </div>
 
-      <div className="home-icon">
-        <a href="/home" className="home-icon"></a>
-        {/* <img src="src\assets\login.png" alt="" className='login-icon'/> */}
-      </div>
+
 
     </div>
   );

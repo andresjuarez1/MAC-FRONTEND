@@ -6,10 +6,12 @@ const History = () => {
   return (
     <div className='history'>
       <div className="container-history">
+        <div className="home-icon">
+          <a href="/home" className="home-icon-img"></a>
+        </div>
         <Hamburger3 />
         <h1 className="history-title">REGISTRO</h1>
         <div className="container-content">
-
           <div className="content-history">
             <div className="card-history-main">
               <div className="header-card-main">

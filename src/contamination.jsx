@@ -1,5 +1,7 @@
 import React from 'react';
-import Hamburger2 from './components/hamburger-menu2';
+import Hamburger3 from './components/hamburger-menu3';
+import HomeIcon from './components/icon-home';
+
 import './styles/contamination.css';
 import LinesChart from './components/linesChart';
 
@@ -7,12 +9,10 @@ import LinesChart from './components/linesChart';
 const Contamination = () => {
   return (
     <div className="con">
-        <div className="home-icon">
-          <a href="/home" className="home-icon-img"></a>
-        </div>
+        <HomeIcon/>
         <div className='contamination-father'>
           <div className="contamination-container-title">
-            <Hamburger2 />
+            <Hamburger3 />
             <div className="container-title">
               <h1 className="contamination-title">INDICES DE CONTAMINACION</h1>
             </div>

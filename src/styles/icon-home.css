@@ -1,0 +1,15 @@
+
+.home-icon{
+    display: flex;
+    position: fixed;
+    left: 1235px;
+    margin: 15px;  
+}
+
+.home-icon-img{
+    background-image: url(../assets/home-icon-blue.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+}

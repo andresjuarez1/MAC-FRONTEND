@@ -6,9 +6,10 @@
 }
 
 .history{
-    width: 100%;
-    
-    height: 90vh;
+    background-image: url(../assets/history-background.jpg);
+    background-size: cover;
+    width: 100%;    
+    height: 100vh;
 }
 
 .container-history{
@@ -21,19 +22,17 @@
     top: 10px;
     left: 570px;
     position: absolute;
+    color: var(--main-color);
 }
 
 .container-content{
     width: 100%;
     height: 88.8vh;
-    /* background-image: url(../assets/image-login-2.png); */
-    background-size: cover;
-    background-color: var(--container-color);
+
     margin-top: 70px;
     /* border-radius: 30px; */
     overflow: hidden;
     position: absolute;
-    /* left: 160px; */
 }
 
 .content-history{
@@ -75,7 +74,7 @@
 
 .cloud-card-main{
     width: 200px;
-    height: 170px;
+    height: 180px;
     margin-left: 80px;
 }
 
@@ -143,7 +142,8 @@
 
 .cloud-cards-img{
     width: 100px;
-    height: 80px;
+    height: 90px;
+    margin-top: -10px;
     margin-left: 30px;
 }
 

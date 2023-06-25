@@ -46,6 +46,8 @@ var midata = {
     ],
 };
 
+
+
 var misoptions = {
     scales : {
         y : {

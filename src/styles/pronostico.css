@@ -1,10 +1,12 @@
 :root{
     --container-color: rgba(0, 0, 0, 0.425);
     --container2-color: rgba(255, 255, 255, 0.219);
+    --hover-color: rgba(123, 123, 123, 0.219);
 }
 
 .container-content-pronostico{
     background-image: url(../assets/pronostico-background.jpg);
+    /* opacity: .1; */
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -24,6 +26,16 @@
     "n1 n1 n1 n2"
     "n1 n1 n1 n2"
     "n1 n1 n1 n3";
+}
+
+.title-header-pronostico{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.txt-pronostico-title{
+    margin-top: 20px;
 }
 
 .left-part-pronostico{
@@ -61,6 +73,7 @@
     margin-left: 20px;
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
 }
 
 .card2-pronostico{
@@ -71,6 +84,7 @@
     margin-right: 10px; 
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
 }
 
 .card3-pronostico{
@@ -80,6 +94,7 @@
     margin-right: 20px; 
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
 }
 
 .card4-pronostico{
@@ -91,6 +106,7 @@
     border-radius: 10px;
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
 }
 
 .card5-pronostico{
@@ -102,6 +118,7 @@
     margin-right: 10px; 
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
 }
 
 .card6-pronostico{
@@ -112,6 +129,7 @@
     border-radius: 10px;
     margin-right: 20px; 
     display: flex;
+    flex-direction: column;
 }
 
 .card7-pronostico{
@@ -121,6 +139,7 @@
     margin-left: 20px;
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
 }
 
 .card8-pronostico{
@@ -131,6 +150,7 @@
     margin-right: 10px; 
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
 }
 
 .card9-pronostico{
@@ -140,12 +160,13 @@
     margin-right: 20px; 
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
 }
 
 .cloud-pronostico{
-    height: 80px;
-    width: 90px;
-    margin-top: 25px;
+    height: 70px;
+    width: 80px;
+    margin-top: 10px;
     margin-left: 30px;
 }
 
@@ -153,4 +174,74 @@
     display: flex;
     align-items: center;
     margin-left: 30px;
+}
+
+.right-temperatura-pronostico{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    gap: 10px;
+}
+
+.title-cards-pronostico{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.content-cards-pronostico{
+    display: flex;
+    height: 16vh;
+}
+
+.title-right-pronostico{
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.grafica-right{
+    width: 100%;
+    height: 30vh;
+}
+
+.bottom-right-pronostico{
+    display: flex;
+    flex-direction: row;
+    margin-top: 15px;
+}
+
+.soleados-right-pronostico{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 12vh;
+    color: white;
+    margin-left: 15px;
+    font-weight: 100;
+}
+
+.lluvia-right-pronostico{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 12vh;
+    color: white;
+}
+
+.bottom-txt{
+    font-weight: 500;
+}
+
+.bottom-soleado-txt{
+    font-weight: 700;
+    color: rgb(255, 36, 36);
+}
+
+.bottom-lluvia-txt{
+    font-weight: 700;
+    color: rgb(46, 46, 255);
 }

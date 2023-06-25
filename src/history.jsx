@@ -1,15 +1,14 @@
 import React from 'react';
-import Hamburger3 from './components/hamburger-menu3';
+import Hamburger2 from './components/hamburger-menu2';
+import HomeIcon2 from './components/icon-home-white';
 import './styles/history.css';
 
 const History = () => {
   return (
     <div className='history'>
       <div className="container-history">
-        <div className="home-icon">
-          <a href="/home" className="home-icon-img"></a>
-        </div>
-        <Hamburger3 />
+        <HomeIcon2/>
+        <Hamburger2 />
         <h1 className="history-title">REGISTRO</h1>
         <div className="container-content">
           <div className="content-history">

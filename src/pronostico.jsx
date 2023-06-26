@@ -138,17 +138,26 @@ const Pronostico = () => {
           <div className="right-part-pronostico">
             <h1 className='title-right-pronostico'>Junio</h1>
             <div className='grafica-right'>
-              <SimplePieCharts/>
+              <SimplePieCharts />
+              <div className="bottom-right-pronostico-card">
+                <div className='soleados-right-pronostico'>
+                  <h4 className='bottom-txt'>Días soleados</h4>
+                  <h4 className="bottom-soleado-txt">15</h4>
+                </div>
+                <div className='lluvia-right-pronostico-card'>
+                  <h4 className='bottom-txt'>Días lluviosos</h4>
+                  <h4 className="bottom-lluvia-txt">15</h4>
+                </div>
+              </div>
             </div>
-            <div className="bottom-right-pronostico">
-              <div className='soleados-right-pronostico'>
-                <h4 className='bottom-txt'>Días soleados</h4>
-                <h4 className="bottom-soleado-txt">15</h4>
-              </div>
-              <div className='lluvia-right-pronostico'>
-                <h4 className='bottom-txt'>Días lluviosos</h4>
-                <h4 className="bottom-lluvia-txt">15</h4>
-              </div>
+          </div>
+
+          <div className="bottom-right-pronostico">
+            <div className='bottom-right-part-pronostico'>
+              <h2 className='bottom-right-txt'>Temperatura máxima</h2>
+              <h2 className='bottom-right-min-txt'>40°</h2>
+              <h2 className='bottom-right-txt'>Temperatura mínima</h2>
+              <h2 className='bottom-right-max-txt'>15°</h2>
             </div>
           </div>
         </div>

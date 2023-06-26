@@ -208,7 +208,7 @@
     height: 30vh;
 }
 
-.bottom-right-pronostico{
+.bottom-right-pronostico-card{
     display: flex;
     flex-direction: row;
     margin-top: 15px;
@@ -224,7 +224,7 @@
     font-weight: 100;
 }
 
-.lluvia-right-pronostico{
+.lluvia-right-pronostico-card{
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -244,4 +244,37 @@
 .bottom-lluvia-txt{
     font-weight: 700;
     color: rgb(46, 46, 255);
+}
+
+.bottom-right-pronostico{
+    background-color: var(--container-color);
+    grid-area: n3;
+    margin: 0px 20px 20px 0px;
+    border-radius: 10px;
+}
+
+.bottom-right-part-pronostico{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+}
+
+.bottom-right-txt{
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.bottom-right-min-txt{
+    font-size: 20px;
+    font-weight: 400;
+    color: red;
+}
+
+.bottom-right-max-txt{
+    font-size: 20px;
+    font-weight: 400;
+    color: blue;
 }

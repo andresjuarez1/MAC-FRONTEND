@@ -1,7 +1,7 @@
 :root{
     --container-color: rgba(0, 0, 0, 0.425);
     --container2-color: rgba(255, 255, 255, 0.219);
-    --hover-color: rgb(140, 215, 225);
+    --hover-color: rgb(107, 171, 180);
 }
 
 .left-part-pronostico{
@@ -140,6 +140,7 @@
     display: flex;
     align-items: center;
     margin-left: 30px;
+    color: white;
 }
 
 .right-temperatura-pronostico{
@@ -154,6 +155,7 @@
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    color: white;
 }
 
 .content-cards-pronostico{

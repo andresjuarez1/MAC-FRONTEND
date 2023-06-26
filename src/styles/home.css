@@ -4,7 +4,6 @@
     --blue-color: #2d2a54af;
 }
 
-
 .container {
     background-image: url('../assets/image-login-2.png');
     background-repeat: no-repeat;
@@ -18,9 +17,6 @@
 
 .city{
     color: var(--main-color);
-    /* display: flex;
-    justify-content: center;
-    margin-top: 20px; */
     position: absolute;
     left: 520px;
     top: 40px;
@@ -35,7 +31,6 @@
 
 .temperature-home{
     position: absolute;
-
 }
 
 .cloud-home{
@@ -60,7 +55,7 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 465px;
+    top: 455px;
     left: 270px;
 }
 
@@ -69,8 +64,23 @@
     gap: 100px;
 }
 
-.card1{
-    padding: 30px 25px;
+.card-img{
+    height: 50px;
+    width: 50px;
+}
+
+.card-txt{
+    font-weight: 200;
+    font-size: 30px;
+}
+
+.ch:hover{
+    background-color: #433f81af;
+    transition: .3s;
+}
+
+.card{
+    padding: 20px;
     height: 25vh;
     background-color: var(--blue-color);
     color: var(--main-color);
@@ -80,74 +90,6 @@
     justify-content: center;
     align-items: center;
     border: 1px solid var(--main-color);
-}
-
-.card1-txt{
-    font-weight: 200;
-    font-size: 30px;
-}
-
-.card1-img{
-    height: 50px;
-    width: 50px;
-}
-
-.card1:hover{
-    background-color: #433f81af;
-}
-
-.card2{
-    padding: 30px 25px;
-    height: 25vh;
-    background-color: var(--blue-color);
-    color: var(--main-color);
-    border-radius: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid var(--main-color);
-}
-
-.card2-txt{
-    font-weight: 200;
-    font-size: 30px;
-}
-
-.card2-img{
-    height: 50px;
-    width: 50px;
-}
-
-.card2:hover{
-    background-color: #433f81af;
-}
-
-.card3{
-    padding: 30px 25px;
-    height: 25vh;
-    background-color: var(--blue-color);
-    color: var(--main-color);
-    border-radius: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid var(--main-color);
-}
-
-.card3-txt{
-    font-weight: 200;
-    font-size: 30px;
-}
-
-.card3-img{
-    height: 50px;
-    width: 50px;
-}
-
-.card3:hover{
-    background-color: #433f81af;
 }
 
 .login-home-icon{

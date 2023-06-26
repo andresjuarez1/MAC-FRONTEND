@@ -41,11 +41,11 @@ const Hamburger2 = () => {
               <img src="src/assets/pronostico-icon.svg" alt="Pronostico Icon" className="pronostico-image2" />
               <a href="/pronostico" className="pronostico-txt2">Pronostico</a>
             </div>
-
+{/* 
             <div className="preassure-icon2">
               <img src="src/assets/register-icon.svg" alt="Register Icon" className="preassure-image2" />
               <a href="/history" className="preassure-txt2">Presión</a>
-            </div>
+            </div> */}
 
           </div>
         )}

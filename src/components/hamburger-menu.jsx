@@ -42,11 +42,10 @@ const Hamburger = () => {
               <a href="/pronostico" className="pronostico-txt">Pronostico</a>
             </div>
 
-            <div className="preassure-icon">
+            {/* <div className="preassure-icon">
               <img src="src/assets/register-icon.svg" alt="Register Icon" className="preassure-image" />
               <a href="/history" className="preassure-txt">Presión</a>
-            </div>
-
+            </div> */}
           </div>
         )}
       </div>

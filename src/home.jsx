@@ -20,17 +20,17 @@ const Home = () => {
       </div>
       <div className="container-cards">
         <div className="cards">
-          <div className="card1">
-            <img src="src\assets\cloud-home.png" alt="" className='card1-img' />
-            <h1 className="card1-txt">17:00 hrs</h1>
+          <div className="ch card">
+            <img src="src\assets\cloud-home.png" alt="" className='card-img' />
+            <h1 className="card-txt">17:00 hrs</h1>
           </div>
-          <div className="card2">
-            <img src="src\assets\cloud-home.png" alt="" className='card2-img' />
-            <h1 className="card2-txt">16:00 hrs</h1>
+          <div className="ch card">
+            <img src="src\assets\cloud-home.png" alt="" className='card-img' />
+            <h1 className="card-txt">16:00 hrs</h1>
           </div>
-          <div className="card3">
-            <img src="src\assets\cloud-home.png" alt="" className='card3-img' />
-            <h1 className="card3-txt">15:00 hrs</h1>
+          <div className="ch card">
+            <img src="src\assets\cloud-home.png" alt="" className='card-img' />
+            <h1 className="card-txt">15:00 hrs</h1>
           </div>
         </div>
       </div>

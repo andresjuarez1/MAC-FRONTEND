@@ -1,10 +1,8 @@
 import React from 'react';
 import Hamburger3 from './components/hamburger-menu3';
 import HomeIcon from './components/icon-home';
-
 import './styles/contamination.css';
 import LinesChart from './components/linesChart';
-
 
 const Contamination = () => {
   return (

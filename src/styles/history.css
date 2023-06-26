@@ -6,7 +6,7 @@
 }
 
 .history{
-    background-image: url(../assets/history-background.jpg);
+    background-image: url(../assets/history-background.png);
     background-size: cover;
     width: 100%;    
     height: 100vh;
@@ -19,7 +19,7 @@
 }
 
 .history-title{
-    top: 10px;
+    top: 20px;
     left: 570px;
     position: absolute;
     color: var(--main-color);
@@ -166,7 +166,6 @@
     grid-area: n4;
     margin: 10px 0px 0px 20px;
     border-radius: 20px;
-
 }
 
 .card-history4{
@@ -174,7 +173,6 @@
     grid-area: n5;
     margin: 10px 10px 0px 20px;
     border-radius: 20px;
-
 }
 
 .card-history5{
@@ -182,7 +180,6 @@
     grid-area: n6;
     margin: 10px 0px 0px 20px;
     border-radius: 20px;
-
 }
 
 .card-history6{
@@ -192,37 +189,7 @@
     border-radius: 20px;
 }
 
-.card-history-main:hover{
-    background-color: var(--card-hover-color);
-    transition: .5s;
-}
-
-.card-history1:hover{
-    background-color: var(--card-hover-color);
-    transition: .5s;
-}
-
-.card-history2:hover{
-    background-color: var(--card-hover-color);
-    transition: .5s;
-}
-
-.card-history3:hover{
-    background-color: var(--card-hover-color);
-    transition: .5s;
-}
-
-.card-history4:hover{
-    background-color: var(--card-hover-color);
-    transition: .5s;
-}
-
-.card-history5:hover{
-    background-color: var(--card-hover-color);
-    transition: .5s;
-}
-
-.card-history6:hover{
+.ch1:hover{
     background-color: var(--card-hover-color);
     transition: .5s;
 }

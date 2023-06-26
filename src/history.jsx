@@ -12,7 +12,7 @@ const History = () => {
         <h1 className="history-title">REGISTRO</h1>
         <div className="container-content">
           <div className="content-history">
-            <div className="card-history-main">
+            <div className="ch1 card-history-main">
               <div className="header-card-main">
                 <h1 className="title-history">27 de Junio del 2023</h1>
                 <h2 className="subtitle-history">Suchiapa</h2>
@@ -27,7 +27,7 @@ const History = () => {
               </div>
             </div>
 
-            <div className="card-history1">
+            <div className="ch1 card-history1">
               <div className="temperature-cards-title">
                 <h2 className="cards-title-header">26 de Junio</h2>
               </div>
@@ -43,7 +43,7 @@ const History = () => {
               </div>
             </div>
 
-            <div className="card-history2">
+            <div className="ch1 card-history2">
               <div className="temperature-cards-title">
                 <h2 className="cards-title-header">26 de Junio</h2>
               </div>
@@ -59,7 +59,7 @@ const History = () => {
               </div>
             </div>
 
-            <div className="card-history3">
+            <div className="ch1 card-history3">
               <div className="temperature-cards-title">
                 <h2 className="cards-title-header">26 de Junio</h2>
               </div>
@@ -75,7 +75,7 @@ const History = () => {
               </div>
             </div>
 
-            <div className="card-history4">
+            <div className="ch1 card-history4">
               <div className="temperature-cards-title">
                 <h2 className="cards-title-header">26 de Junio</h2>
               </div>
@@ -91,7 +91,7 @@ const History = () => {
               </div>
             </div>
 
-            <div className="card-history5">
+            <div className="ch1 card-history5">
               <div className="temperature-cards-title">
                 <h2 className="cards-title-header">26 de Junio</h2>
               </div>
@@ -107,7 +107,7 @@ const History = () => {
               </div>
             </div>
 
-            <div className="card-history6">
+            <div className="ch1 card-history6">
               <div className="temperature-cards-title">
                 <h2 className="cards-title-header">26 de Junio</h2>
               </div>

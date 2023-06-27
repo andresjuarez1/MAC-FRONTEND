@@ -176,3 +176,12 @@
     /* padding: 15px 0px; */
 }
 
+.logout3{
+    background-image: url(../assets/exit.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    margin-top: 165px;
+    margin-left: 220px;
+}

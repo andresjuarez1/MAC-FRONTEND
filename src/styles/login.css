@@ -6,7 +6,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-.container {
+.container-login {
     display: flex;
 }
 
@@ -15,58 +15,82 @@
     height: 100%;
     width: 50%;    
     padding: 2em 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .mac-image {
-    width: 200px;
-    height: 50px;
-    margin-bottom: 4rem;
+    width: 250px;
+    height: 60px;
+    margin-bottom: 4.5rem;
 }
 
-.h1-text-login {
-    margin-bottom: 20px;
-    color: #2D2A54;
-}
-
-.h2-text-login {
-    width: 350px;
-    margin-bottom: 40px;
-    font-size: 1em;
-    color: #2d2a54a1;
-}
-
-.input-login {
-    width: 450px;
+.container-text-login{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 25px;
+    align-items: center;
     margin-bottom: 30px;
 }
 
-.input-email {
-    padding: 10px;
+.h1-text-login {
+    /* margin-bottom: 20px; */
+    color: #2D2A54;
+    margin-bottom: 10px;
+}
+
+.h2-text-login {
+    /* margin-bottom: 40px; */
+    font-size: .9em;
+    color: #2d2a54a1;
+    text-align: center;
+}
+
+.input-login {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-email{
     margin-bottom: 20px;
-    border-radius: 10px;
+}
+
+.inp{
+    width: 350px;
+    padding: 10px;
+    border-radius: 30px;
     background-color: #D7D8F0;
     border: solid #D7D8F0;
 }
 
-.input-pwd {
-    padding: 10px;
-    border-radius: 10px;
-    background-color: #D7D8F0;
-    border: solid #D7D8F0;
+.line{
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.line2{
+    height: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
 }
 
 .btn-login {
     display: flex;
-    width: 450px;
+    width: 350px;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    margin-bottom: 20px;
     padding: 10px 0px;
-    border-radius: 10px;
+    border-radius: 30px;
     border: solid #2D2A54;
     background-color: #2D2A54;
     color: #D7D8F0;
@@ -81,9 +105,7 @@
 }
 
 .text-register-login {
-    margin-top: 1em;
     display: flex;
-    width: 450px;
     flex-direction: column;
     align-items: center;
 }
@@ -110,16 +132,7 @@
     color: #423e79;
 }
 
-.right-part{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.image-login-main{
     width: 50%;
     height: 100vh;
-    background-color: #2D2A54;
-}
-
-.ilustration{
-    width: 90%;
-    height: 80%;
 }

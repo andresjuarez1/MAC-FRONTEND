@@ -5,15 +5,13 @@ import Barra from './components/state-bar';
 
 const Home = () => {
   return (
-    <div className="container">
-      <div className="content">
-        <Hamburger />
+    <div className="container-home">
         <Barra />
         <div className="header">
           <img src="src\assets\ubication.png" alt="" className='ubication-icon' />
           <h1 className="city">Suchiapa, Chiapas</h1>
+        <Hamburger />
         </div>
-      </div>
       <div className="temperature-home">
         <img src="src\assets\cloud-home.png" alt="" className='cloud-home' />
         <h1 className='temperature-data-home'>50°</h1>

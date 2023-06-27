@@ -46,7 +46,7 @@ const Hamburger2 = () => {
               <img src="src/assets/register-icon.svg" alt="Register Icon" className="preassure-image2" />
               <a href="/history" className="preassure-txt2">Presión</a>
             </div> */}
-
+              <a href="/" className="logout2"></a>
           </div>
         )}
       </div>

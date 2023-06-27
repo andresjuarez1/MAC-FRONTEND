@@ -1,7 +1,11 @@
-/* 
+.hamburger-menu{
+    width: 100px;
+}
+
 .container-hamburger{
     width: 100px;
-} */
+}
+
 
 .menu-container {
     display: flex;
@@ -163,4 +167,14 @@
     transition: .3s;
     background-color: #6761c2af;
     /* padding: 15px 0px; */
+}
+
+.logout{
+    background-image: url(../assets/exit.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 35px;
+    height: 35px;
+    margin-top: 180px;
+    margin-left: 220px;
 }

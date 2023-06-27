@@ -12,19 +12,19 @@ const Hamburger = () => {
   return (
     <div className="container-hamburger">
       <div className={`hamburger-menu ${isOpen ? 'open' : ''}`}>
-          <button className={`menu-toggle ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
-            {isOpen ? (
-              <>
-                <img src="src\assets\mac-login-white.png" alt="Menu Open" className="mac-icon-home" />
-              </>
-            ) : (
-              <>
-                <span className="bar"></span>
-                <span className="bar"></span>
-                <span className="bar"></span>
-              </>
-            )}
-          </button>
+        <button className={`menu-toggle ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
+          {isOpen ? (
+            <>
+              <img src="src\assets\mac-login-white.png" alt="Menu Open" className="mac-icon-home" />
+            </>
+          ) : (
+            <>
+              <span className="bar"></span>
+              <span className="bar"></span>
+              <span className="bar"></span>
+            </>
+          )}
+        </button>
         {isOpen && (
           <div className="menu">
             <div className="contamination-icon">
@@ -46,6 +46,7 @@ const Hamburger = () => {
               <img src="src/assets/register-icon.svg" alt="Register Icon" className="preassure-image" />
               <a href="/history" className="preassure-txt">Presión</a>
             </div> */}
+            <a href="/" className="logout"></a>
           </div>
         )}
       </div>

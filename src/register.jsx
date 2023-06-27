@@ -16,7 +16,7 @@ function Register() {
                     <h1 className='h1-text-register'>REGISTRATE</h1>
                     <h2 className='h2-text-register'>"Emprende tu viaje a través del clima con WeatherSense"</h2>
                 </div>
-
+                    
                 <div className="input-register">
                     <input type="email" placeholder='Email' className='input-email-register' />
                     <input type="password" placeholder='Contraseña' className='input-pwd-register' />

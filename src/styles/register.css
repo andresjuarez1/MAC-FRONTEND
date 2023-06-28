@@ -11,63 +11,69 @@
 }
 
 .left-part-register {
-    /* background-color: aqua; */
-    height: 100;
+    height: 100vh;
     width: 50%;    
     padding: 2em 5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #2D2A54;
 }
 
 .mac-image-register {
-    width: 200px;
-    height: 50px;
-    margin-bottom: 4rem;
+    width: 250px;
+    height: 60px;
+    margin-bottom: 4.5rem;
 }
 
-.h1-text-register {
-    margin-bottom: 20px;
-    color: #D7D8F0;
-}
-
-.h2-text-register {
-    width: 350px;
-    margin-bottom: 40px;
-    font-size: 1em;
-    color: #D7D8F0;
-}
-
-.input-register {
-    width: 450px;
+.text-register{
+    width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 25px;
+    align-items: center;
     margin-bottom: 30px;
 }
 
-.input-email-register {
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    background-color: white;
-    border: solid white;
+.h1-text-register {
+    /* margin-bottom: 20px; */
+    color: #D7D8F0;
+    margin-bottom: 10px;
 }
 
-.input-pwd-register {
+.h2-text-register {
+    /* margin-bottom: 40px; */
+    font-size: .9em;
+    color: #D7D8F0;
+    text-align: center;
+}
+
+.reg{
+    width: 350px;
     padding: 10px;
-    border-radius: 10px;
-    background-color: white;
-    border: solid white;
+    border-radius: 30px;
+    background-color: #D7D8F0;
+    border: solid #D7D8F0;
+}
+
+.input-register{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-email-register{
+    margin-bottom: 20px;
 }
 
 .btn-register {
     display: flex;
-    width: 450px;
+    width: 350px;
     flex-direction: column;
     align-items: center;
     text-decoration: none;
-    margin-bottom: 20px;
     padding: 10px 0px;
-    border-radius: 10px;
+    border-radius: 30px;
     border: solid #D7D8F0;
     background-color: #D7D8F0;
     color: #2D2A54;
@@ -78,15 +84,17 @@
     background-color: #bcbcd4;
     color: #2D2A54;
     transition: .3s;
-    cursor: pointer;
 }
 
 .text-login-register {
-    margin-top: 1em;
     display: flex;
     width: 450px;
     flex-direction: column;
     align-items: center;
+}
+
+.campo{
+    color: white;
 }
 
 .txt-login,

@@ -7,12 +7,6 @@ import { useForm } from 'react-hook-form'
 import Line from './assets/line-white.png'
 
 function Register() {
-    const { register, formState: { errors }, handleSubmit } = useForm();
-
-    const onSubmit = (data) => {
-        console.log(data);
-    }
-
     return (
         <div className='container-register'>
             <div className='left-part-register'>
@@ -23,27 +17,29 @@ function Register() {
                     <h2 className='h2-text-register'>"Emprende tu viaje a través del clima con WeatherSense"</h2>
                 </div>
 
-                <form onSubmit={handleSubmit(onSubmit)}>
+                {/* <form onSubmit={handleSubmit(onSubmit)}> */}
                     <div className="input-register">
                         <input type="email"
-                            {...register('email', {
-                                required: true,
-                                maxLength: 10
-                            })} placeholder='Email' className='reg input-email-register' />
+                            // {...register('email', {
+                            //     required: true,
+                            //     maxLength: 10
+                            // })} 
+                            placeholder='Email' className='reg input-email-register' />
 
                         <input type="password"
-                            {...register('pwd', {
-                                required: true,
-                                maxLength: 10
-                            })} placeholder='Contraseña' className='reg input-pwd-register' />
+                            // {...register('pwd', {
+                            //     required: true,
+                            //     maxLength: 10
+                            // })} 
+                            placeholder='Contraseña' className='reg input-pwd-register' />
 
                         <img src={Line} alt="" className='line' />
 
                         <div className="btn">
-                            <input type='submit' value='Registrate' className='btn-register'></input>
+                            <button type='submit' className='btn-register'>Register</button>
                         </div>
                     </div>
-                </form>
+                {/* </form> */}
 
                 <img src={Line} alt="" className='line2' />
 

@@ -27,25 +27,22 @@ const Hamburger3 = () => {
         </button>
         {isOpen && (
           <div className="menu3">
-            <div className="contamination-icon3">
-              <img src="src/assets/contamination-icon.svg" alt="Contamination Icon" className="contamination-image3" />
-              <a href="/contamination" className="contamination-txt3">
-                Contaminación
-              </a>
-            </div>
-            <div className="register-icon3">
-              <img src="src/assets/register-icon.svg" alt="Register Icon" className="register-image3" />
-              <a href="/history" className="register-txt3">Registro</a>
-            </div>
-            <div className="pronostico-icon3">
-              <img src="src/assets/pronostico-icon.svg" alt="Pronostico Icon" className="pronostico-image3" />
-              <a href="/pronostico" className="pronostico-txt3">Pronostico</a>
-            </div>
 
-            {/* <div className="preassure-icon3">
-              <img src="src/assets/register-icon.svg" alt="Register Icon" className="preassure-image3"/>
-              <a href="/history" className="preassure-txt3">Presión</a>
-            </div> */}
+            <a href="/contamination" className="hover-hamburger contamination-hamburger3">
+              <img src="src/assets/contamination-icon.svg" alt="Contamination Icon" className="contamination-image3" />
+              <h1 className='txt-hamburger-icon3'>Contaminacion</h1>
+            </a>
+
+            <a className="hover-hamburger history-hamburger3" href='/history'>
+              <img src="src/assets/register-icon.svg" alt="Register Icon" className="history-image3" />
+              <h1 className='txt-hamburger-icon3'>Registro</h1>
+            </a>
+
+            <a href="/pronostico" className="hover-hamburger pronostico-hamburger3">
+              <img src="src/assets/pronostico-icon.svg" alt="Pronostico Icon" className="pronostico-image3"/>
+              <h1 className='txt-hamburger-icon3'>Pronostico</h1>
+            </a>
+
             <a href="/" className="logout3"></a>
           </div>
         )}

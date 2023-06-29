@@ -43,10 +43,6 @@ const Hamburger = () => {
               <h1 className='txt-hamburger-icon'>Pronostico</h1>
             </a>
 
-            {/* <div className="preassure-icon">
-              <img src="src/assets/register-icon.svg" alt="Register Icon" className="preassure-image" />
-              <a href="/history" className="preassure-txt">Presión</a>
-            </div> */}
             <a href="/" className="logout"></a>
           </div>
         )}

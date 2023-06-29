@@ -27,20 +27,21 @@ const Hamburger2 = () => {
           </button>
         {isOpen && (
           <div className="menu2">
-            <div className="contamination-icon2">
-              <img src="src/assets/contamination-icon.svg" alt="Contamination Icon" className="contamination-image2" />
-              <a href="/contamination" className="contamination-txt2">
-                Contaminación
-              </a>
-            </div>
-            <div className="register-icon2">
-              <img src="src/assets/register-icon.svg" alt="Register Icon" className="register-image2" />
-              <a href="/history" className="register-txt2">Registro</a>
-            </div>
-            <div className="pronostico-icon2">
-              <img src="src/assets/pronostico-icon.svg" alt="Pronostico Icon" className="pronostico-image2" />
-              <a href="/pronostico" className="pronostico-txt2">Pronostico</a>
-            </div>
+
+           <a href="/contamination" className="hover-hamburger contamination-hamburger3">
+              <img src="src/assets/contamination-icon.svg" alt="Contamination Icon" className="contamination-image3" />
+              <h1 className='txt-hamburger-icon3'>Contaminacion</h1>
+            </a>
+
+            <a className="hover-hamburger history-hamburger3" href='/history'>
+              <img src="src/assets/register-icon.svg" alt="Register Icon" className="history-image3" />
+              <h1 className='txt-hamburger-icon3'>Registro</h1>
+            </a>
+
+            <a href="/pronostico" className="hover-hamburger pronostico-hamburger3">
+              <img src="src/assets/pronostico-icon.svg" alt="Pronostico Icon" className="pronostico-image3"/>
+              <h1 className='txt-hamburger-icon3'>Pronostico</h1>
+            </a>
 {/* 
             <div className="preassure-icon2">
               <img src="src/assets/register-icon.svg" alt="Register Icon" className="preassure-image2" />

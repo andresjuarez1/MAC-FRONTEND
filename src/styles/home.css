@@ -96,19 +96,3 @@
     align-items: center;
     border: 1px solid var(--main-color);
 }
-
-.login-home-icon{
-    display: flex;
-    position: absolute;
-    left: 1210px;
-    margin: 20px;
-    top: 10px;
-}
-
-.login-icon{
-    background-image: url(../assets/login.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 50px;
-    height: 50px;
-}

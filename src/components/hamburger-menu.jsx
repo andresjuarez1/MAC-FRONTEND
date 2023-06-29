@@ -26,21 +26,22 @@ const Hamburger = () => {
           )}
         </button>
         {isOpen && (
-          <div className="menu">
-            <div className="contamination-icon">
+          <div className="menu" >
+
+            <a href="/contamination" className="hover-hamburger contamination-hamburger">
               <img src="src/assets/contamination-icon.svg" alt="Contamination Icon" className="contamination-image" />
-              <a href="/contamination" className="contamination-txt">
-                Contaminación
-              </a>
-            </div>
-            <div className="register-icon">
-              <img src="src/assets/register-icon.svg" alt="Register Icon" className="register-image" />
-              <a href="/history" className="register-txt">Registro</a>
-            </div>
-            <div className="pronostico-icon">
+              <h1 className='txt-hamburger-icon'>Contaminacion</h1>
+            </a>
+
+            <a className="hover-hamburger history-hamburger" href='/history'>
+              <img src="src/assets/register-icon.svg" alt="Register Icon" className="history-image" />
+              <h1 className='txt-hamburger-icon'>Registro</h1>
+            </a>
+
+            <a href="/pronostico" className="hover-hamburger pronostico-hamburger">
               <img src="src/assets/pronostico-icon.svg" alt="Pronostico Icon" className="pronostico-image" />
-              <a href="/pronostico" className="pronostico-txt">Pronostico</a>
-            </div>
+              <h1 className='txt-hamburger-icon'>Pronostico</h1>
+            </a>
 
             {/* <div className="preassure-icon">
               <img src="src/assets/register-icon.svg" alt="Register Icon" className="preassure-image" />

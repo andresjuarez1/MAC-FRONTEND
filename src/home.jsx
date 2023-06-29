@@ -32,11 +32,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      <div className="login-home-icon">
-        <a href="/" className="login-icon"></a>
-        {/* <img src="src\assets\login.png" alt="" className='login-icon'/> */}
-      </div>
     </div>
   );
 };

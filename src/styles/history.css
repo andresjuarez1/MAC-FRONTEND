@@ -1,31 +1,31 @@
-:root{
+:root {
     --card-color: #aab3ff8c;
     --card-hover-color: #4852b1;
     --main-color: white;
     --container-color: #3456ffb7;
 }
 
-.history{
+.history {
     background-image: url(../assets/history-background.png);
     background-size: cover;
-    width: 100%;    
+    width: 100%;
     height: 100vh;
 }
 
-.container-history{
+.container-history {
     display: flex;
     width: 100%;
     height: 90vh;
 }
 
-.history-title{
+.history-title {
     top: 20px;
     left: 570px;
     position: absolute;
     color: var(--main-color);
 }
 
-.container-content{
+.container-content {
     width: 100%;
     height: 88.8vh;
 
@@ -35,161 +35,213 @@
     position: absolute;
 }
 
-.content-history{
+.content-history {
     display: grid;
     width: 100%;
     height: 530px;
     margin: 10px auto;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: 
-    "n1 n1 n2 n3"
-    "n1 n1 n4 n5"
-    "n1 n1 n6 n7";
+    grid-template-areas:
+        "n1 n1 n2 n3"
+        "n1 n1 n4 n5"
+        "n1 n1 n6 n7";
 }
 
-.card-history-main{
+.card-history-main {
     background-color: var(--card-color);
     grid-area: n1;
     margin: 10px 0px 0px 30px;
     border-radius: 30px;
 }
 
-.header-card-main{
+.header-card-main {
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.title-history{
+.title-history {
     color: var(--main-color);
     margin-top: 20px;
 }
 
-.subtitle-history{
+.subtitle-history {
     color: var(--main-color);
     margin-top: 20px;
     margin-bottom: 20px;
 }
 
-.cloud-card-main{
+.cloud-card-main {
     width: 200px;
     height: 180px;
     margin-left: 80px;
 }
 
-.content-card-main{
+.content-card-main {
     display: flex;
     margin-top: 20px;
+    align-items: center;
 }
 
-.temperature-card-main{
+.temperature-card-main {
     color: var(--main-color);
     font-size: 6em;
     font-weight: 400;
-    margin-left: 70px;
-    margin-top: 60px;
+    margin-left: 50px;
 }
 
-.temperatura-footer{
+.temperatura-footer {
     margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.temperatura-main-footer{
+.temperatura-main-footer {
     margin-bottom: 20px;
     color: var(--main-color);
 }
 
-.temperatura2-main-footer{
+.temperatura2-main-footer {
     color: var(--main-color);
 }
 
-.card-history1{
+.card-history1 {
     background-color: var(--card-color);
     grid-area: n2;
     margin: 10px 0px 0px 20px;
     border-radius: 20px;
 }
 
-.cards-title-header{
+.cards-title-header {
     margin-top: 10px;
 }
 
-.temperature-cards-title{
+.temperature-cards-title {
     color: var(--main-color);
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.temperature-content-card{
+.temperature-content-card {
     width: 100%;
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
 
-.left-part-cards{
+.left-part-cards {
     width: 50%;
 }
 
-.right-part-cards{
+.right-part-cards {
     width: 50%;
 }
 
-.cloud-cards-img{
+.cloud-cards-img {
     width: 100px;
     height: 90px;
     margin-top: -10px;
     margin-left: 30px;
 }
 
-.temperature-card-txt{
+.temperature-card-txt {
     color: var(--main-color);
     font-size: 1.2em;
     font-weight: 500;
     margin-top: 15px;
 }
 
-.card-history2{
+.card-history2 {
     background-color: var(--card-color);
     grid-area: n3;
     margin: 10px 10px 0px 20px;
     border-radius: 20px;
 }
 
-.card-history3{
-    background-color:var(--card-color);
+.card-history3 {
+    background-color: var(--card-color);
     grid-area: n4;
     margin: 10px 0px 0px 20px;
     border-radius: 20px;
 }
 
-.card-history4{
+.card-history4 {
     background-color: var(--card-color);
     grid-area: n5;
     margin: 10px 10px 0px 20px;
     border-radius: 20px;
 }
 
-.card-history5{
+.card-history5 {
     background-color: var(--card-color);
     grid-area: n6;
     margin: 10px 0px 0px 20px;
     border-radius: 20px;
 }
 
-.card-history6{
+.card-history6 {
     background-color: var(--card-color);
     grid-area: n7;
     margin: 10px 10px 0px 20px;
     border-radius: 20px;
 }
 
-.ch1:hover{
+.ch1:hover {
     background-color: var(--card-hover-color);
     transition: .5s;
 }
+
+@media (max-width: 412px) {
+    .history {
+      padding: 10px;
+    }
+  
+    .container-history {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .history-title {
+      text-align: center;
+    }
+  
+    .container-content {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .content-history {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-areas:
+          "n1 n1"
+          "n2 n3"
+          "n4 n5"
+          "n6 n7";
+    }
+  
+    .card-history-main {
+      width: 100%;
+      max-width: 350px;
+      margin: 0 auto;
+      grid-column: span 2;
+    }
+  
+    .card-history1,
+    .card-history2,
+    .card-history3,
+    .card-history4,
+    .card-history5,
+    .card-history6 {
+      max-width: 160px;
+      margin: 0 auto;
+    }
+  }
+  
+  
+  
+  

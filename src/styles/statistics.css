@@ -1,0 +1,46 @@
+.container-statistics{
+    width: 100%;
+    height: 100vh;
+}
+
+.header-statistics{
+    width: 100%;
+    height: 10vh;
+}
+
+.title-statistics{
+    position: absolute;
+    top: 20px;
+    left: 450px;
+}
+
+.content-statistics{
+    width: 100%;
+    height: 120vh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    "n1 n2"
+    "n3 n4";
+}
+
+.media{
+    grid-area: n1;
+    margin: 20px;
+}
+
+.moda{
+    grid-area: n2;
+    margin: 20px;
+}
+
+.mediana{
+    grid-area: n3;
+    margin: 20px;
+}
+
+.varianza{
+    grid-area: n4;
+    margin: 20px;
+}

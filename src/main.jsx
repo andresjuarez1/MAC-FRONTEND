@@ -6,9 +6,8 @@ import Home from './home'
 import History from './history'
 import Contamination from './contamination'
 import Pronostico from './pronostico'
+import Statistics from './statistics'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
-
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -20,6 +19,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         <Route path='/contamination' element={<Contamination />} />
         <Route path='/history' element={<History />} />
         <Route path='/pronostico' element={<Pronostico />} />
+        <Route path='/statistics' element={<Statistics />} />
       </Routes>
     </BrowserRouter>
 

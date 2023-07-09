@@ -26,24 +26,29 @@ const Hamburger3 = () => {
           )}
         </button>
         {isOpen && (
-          <div className="menu3">
+          <div className="menu3" >
 
-            <a href="/contamination" className="hover-hamburger contamination-hamburger3">
-              <img src="src/assets/contamination-icon.svg" alt="Contamination Icon" className="contamination-image3" />
-              <h1 className='txt-hamburger-icon3'>Contaminacion</h1>
+            <a href="/contamination" className="aaa hover-hamburger contamination-hamburger">
+              <img src="src/assets/contamination-icon.svg" alt="Contamination Icon" className="image" />
+              <h1 className='txt-hamburger-icon'>Contaminacion</h1>
             </a>
 
-            <a className="hover-hamburger history-hamburger3" href='/history'>
-              <img src="src/assets/register-icon.svg" alt="Register Icon" className="history-image3" />
-              <h1 className='txt-hamburger-icon3'>Registro</h1>
+            <a href='/history' className="aaa hover-hamburger history-hamburger">
+              <img src="src/assets/register-icon.svg" alt="Register Icon" className="image" />
+              <h1 className='txt-hamburger-icon'>Registro</h1>
             </a>
 
-            <a href="/pronostico" className="hover-hamburger pronostico-hamburger3">
-              <img src="src/assets/pronostico-icon.svg" alt="Pronostico Icon" className="pronostico-image3"/>
-              <h1 className='txt-hamburger-icon3'>Pronostico</h1>
+            <a href="/pronostico" className="aaa hover-hamburger pronostico-hamburger">
+              <img src="src/assets/pronostico-icon.svg" alt="Pronostico Icon" className="image" />
+              <h1 className='txt-hamburger-icon'>Pronostico</h1>
             </a>
 
-            <a href="/" className="logout3"></a>
+            <a href="/statistics" className="aaa hover-hamburger statistic-hamburger">
+              <img src="src\assets\estadistica-logo.svg" alt="Estadistica Icon" className="image" />
+              <h1 className='txt-hamburger-icon'>Estadistica</h1>
+            </a>
+
+            <a href="/" className="logout"></a>
           </div>
         )}
       </div>

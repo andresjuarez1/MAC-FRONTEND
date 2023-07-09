@@ -17,27 +17,30 @@ const Statistics = () => {
                 </div>
 
                 <div className="content-statistics">
-                    <div className="media">
-                        <h2 className="txt-media">MEDIA</h2>
-                        <SimplePieCharts />
-                    </div>
-
-                    <div className="moda">
-                        <h2 className="txt-moda">MODA</h2>
+                    
+                    <div className="card-statistic media">
+                        <h2 className="txt-statistics">MEDIA</h2>
                         <div className="grafica-1">
                             <LinesChart />
                         </div>
                     </div>
 
-                    <div className="mediana">
-                        <h2 className="txt-mediana">MEDIANA</h2>
+                    <div className="card-statistic moda">
+                        <h2 className="txt-statistics">MODA</h2>
                         <div className="grafica-1">
                             <LinesChart />
                         </div>
                     </div>
 
-                    <div className="varianza">
-                        <h2 className="txt-varianza">VARIANZA</h2>
+                    <div className="card-statistic mediana">
+                        <h2 className="txt-statistics">MEDIANA</h2>
+                        <div className="grafica-1">
+                            <LinesChart />
+                        </div>
+                    </div>
+
+                    <div className="card-statistic varianza">
+                        <h2 className="txt-statistics">VARIANZA</h2>
                         <div className="grafica-1">
                             <LinesChart />
                         </div>

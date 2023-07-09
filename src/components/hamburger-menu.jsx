@@ -29,18 +29,23 @@ const Hamburger = () => {
           <div className="menu" >
 
             <a href="/contamination" className="hover-hamburger contamination-hamburger">
-              <img src="src/assets/contamination-icon.svg" alt="Contamination Icon" className="contamination-image" />
+              <img src="src/assets/contamination-icon.svg" alt="Contamination Icon" className="image" />
               <h1 className='txt-hamburger-icon'>Contaminacion</h1>
             </a>
 
-            <a className="hover-hamburger history-hamburger" href='/history'>
-              <img src="src/assets/register-icon.svg" alt="Register Icon" className="history-image" />
+            <a href='/history' className="hover-hamburger history-hamburger">
+              <img src="src/assets/register-icon.svg" alt="Register Icon" className="image" />
               <h1 className='txt-hamburger-icon'>Registro</h1>
             </a>
 
             <a href="/pronostico" className="hover-hamburger pronostico-hamburger">
-              <img src="src/assets/pronostico-icon.svg" alt="Pronostico Icon" className="pronostico-image" />
+              <img src="src/assets/pronostico-icon.svg" alt="Pronostico Icon" className="image" />
               <h1 className='txt-hamburger-icon'>Pronostico</h1>
+            </a>
+
+            <a href="/statistics" className="hover-hamburger pronostico-hamburger">
+              <img src="src\assets\estadistica-logo.svg" alt="Estadistica Icon" className="image statistic" />
+              <h1 className='txt-hamburger-icon'>Estadistica</h1>
             </a>
 
             <a href="/" className="logout"></a>

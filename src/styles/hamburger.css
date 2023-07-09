@@ -1,22 +1,21 @@
-.hamburger-menu{
-    width: 100px;
-}
-
 .container-hamburger{
-    width: 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
-.menu-container {
+.menu-container{
     display: flex;
     z-index: 1;
     margin: 0px;
 }
 
-.menu-container.open {
+.menu-container.open{
     background-color: #2d2a54af;
 }
 
-.menu-toggle {
+.menu-toggle{
     background: none;
     border: none;
     cursor: pointer;
@@ -35,11 +34,12 @@
     margin: 0;
     padding: 0;
     width: 270px;
-    background-color: #2d2a54af;
+    background-color: #2d2a54;
+    height: 10vh;
 }
 
 .mac-icon-home{
-    height: 100px;
+    height: 50px;
     width: 200px;
     /* background-color: #2d2a54af; */
     margin-top: 20px;
@@ -56,55 +56,26 @@
 }
 
 .menu {
-    background-color: #2d2a54af;
+    background-color: #2d2a54;
     display: flex;
     flex-direction: column;
     width: 270px;
-    height: 580px;
+    height: 100vh;
+    position: absolute;
 }
 
-.hover-hamburger{
-    display: flex;
-    flex-direction: row;
-}
-
-.menu a {
+.menu a{
     color: #fff;
     overflow: hidden;
     font-size: 18px;
     margin-bottom: 10px;
-    text-decoration: none;
+    text-decoration: none;   
 }
 
-.contamination-image{
+.image{
     width: 50px;
     height: 50px;
     margin-left: 20px;
-}
-
-.contamination-hamburger{
-    margin-top: 80px;
-    width: 100%;
-}
-
-.history-hamburger{
-    margin-top: 50px;
-}
-
-.history-image{
-    width: 50px;
-    height: 50px;
-    margin-left: 20px;
-}
-
-.pronostico-image{
-    margin-left: 20px;
-    width: 50px;
-    height: 50px;
-}
-
-.pronostico-hamburger{
-    margin-top: 50px;
 }
 
 .txt-hamburger-icon{
@@ -114,10 +85,15 @@
     margin-left: 10px;
 }
 
+.hover-hamburger{
+    display: flex;
+    margin-top: 50px;
+
+}
+
 .hover-hamburger:hover{
     transition: .3s;
     background-color: #6761c2af;
-    /* padding: 15px 0px; */
 }
 
 .logout{
@@ -126,6 +102,6 @@
     background-repeat: no-repeat;
     width: 35px;
     height: 35px;
-    margin-top: 180px;
+    margin-top: 70px;
     margin-left: 220px;
 }

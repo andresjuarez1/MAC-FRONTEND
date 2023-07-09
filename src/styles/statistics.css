@@ -1,3 +1,8 @@
+:root{
+    --card-color-statistic: #d7d4ff;
+    --card-hover-color-statistic: #c6c2f8;
+}
+
 .container-statistics{
     width: 100%;
     height: 100vh;
@@ -11,7 +16,7 @@
 .title-statistics{
     position: absolute;
     top: 20px;
-    left: 450px;
+    left: 500px;
 }
 
 .content-statistics{
@@ -25,22 +30,33 @@
     "n3 n4";
 }
 
+.txt-statistics{
+    text-align: center;
+    margin-top: 15px;
+}
+
+.card-statistic{
+    background-color: var(--card-color-statistic);
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.card-statistic:hover{
+    background-color: var(--card-hover-color-statistic);
+}
+
 .media{
     grid-area: n1;
-    margin: 20px;
 }
 
 .moda{
     grid-area: n2;
-    margin: 20px;
 }
 
 .mediana{
     grid-area: n3;
-    margin: 20px;
 }
 
 .varianza{
     grid-area: n4;
-    margin: 20px;
 }

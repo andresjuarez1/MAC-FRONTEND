@@ -46,6 +46,10 @@ const Statistics = () => {
                         </div>
                     </div>
                 </div>
+
+                <div className="footer-statistics">
+                    <button className="print">Imprimir</button>
+                </div>
             </div>
         </div>
     );

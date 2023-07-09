@@ -60,3 +60,25 @@
 .varianza{
     grid-area: n4;
 }
+
+.footer-statistics{
+    display: flex;
+    justify-content: center;
+}
+
+.print{
+    margin-top: 30px;
+    margin-bottom: 40px;
+    padding: 10px 20px;
+    background-color: #2d2a54;
+    border-radius: 20px;
+    color: white;
+    border: solid #2d2a54;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.print:hover{
+    background-color: #433e8a;
+    border: solid #433e8a;
+}

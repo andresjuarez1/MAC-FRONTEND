@@ -7,7 +7,6 @@ import { axiosInstance } from './helpers/AxiosInstance';
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from "react";
 
-
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');

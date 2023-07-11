@@ -1,21 +1,16 @@
-.container-hamburger{
+.container-hamburger {
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
 }
 
-.menu-container{
-    display: flex;
-    z-index: 1;
-    margin: 0px;
+.hamburger-menu.open {
+    width: 270px;
+    background-color: #2d2a54;
 }
 
-.menu-container.open{
-    background-color: #2d2a54af;
-}
-
-.menu-toggle{
+.menu-toggle {
     background: none;
     border: none;
     cursor: pointer;
@@ -28,21 +23,24 @@
     height: 45px;
 }
 
-.menu-toggle.open{
+.menu-toggle.open {
     display: flex;
     align-items: center;
-    margin: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-left: 110px;
     padding: 0;
-    width: 270px;
-    background-color: #2d2a54;
-    height: 10vh;
+    height: 9vh;
 }
 
-.mac-icon-home{
-    height: 50px;
-    width: 200px;
-    /* background-color: #2d2a54af; */
-    margin-top: 20px;
+.images-header-ham {
+    display: flex;
+}
+
+.close {
+    height: 70px;
+    width: 50px;
+    margin-top: 10px;
 }
 
 .bar {
@@ -64,44 +62,73 @@
     position: absolute;
 }
 
-.menu a{
+.menu a {
     color: #fff;
     overflow: hidden;
     font-size: 18px;
     margin-bottom: 10px;
-    text-decoration: none;   
+    text-decoration: none;
 }
 
-.image{
+.image {
     width: 50px;
     height: 50px;
     margin-left: 20px;
 }
 
-.txt-hamburger-icon{
+.txt-hamburger-icon {
     font-size: 1em;
     font-weight: 500;
     margin-top: 15px;
     margin-left: 10px;
 }
 
-.hover-hamburger{
+.hover-hamburger {
+    margin-top: 30px;
     display: flex;
-    margin-top: 50px;
-
 }
 
-.hover-hamburger:hover{
+.contamination-hamburger {
+    width: 100%;
+    position: absolute;
+    top: 20px;
+}
+
+.history-hamburger {
+    width: 100%;
+    position: absolute;
+    top: 120px;
+}
+
+.pronostico-hamburger {
+    width: 100%;
+    position: absolute;
+    top: 220px;
+}
+
+.statistic-hamburger {
+    width: 100%;
+    position: absolute;
+    top: 320px;
+}
+
+.hover-hamburger:hover {
     transition: .3s;
     background-color: #6761c2af;
+    padding: 10px;
 }
 
-.logout{
+.hover-hamburger:not(:hover) {
+    transition: .3s;
+}
+
+.logout {
     background-image: url(../assets/exit.png);
     background-size: contain;
     background-repeat: no-repeat;
     width: 35px;
     height: 35px;
-    margin-top: 70px;
-    margin-left: 220px;
+    top: 510px;
+    left: 220px;
+    position: absolute;
 }

@@ -15,7 +15,11 @@ const Hamburger = () => {
         <button className={`menu-toggle ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
           {isOpen ? (
             <>
-              <img src="src\assets\mac-login-white.png" alt="Menu Open" className="mac-icon-home" />
+              <div className="images-header-hamb">
+                <img src="src\assets\close.svg" alt="Menu Open" className="close" />
+                {/* <img src="src\assets\mac-login-white.png" alt="Menu Open" className="mac-icon-home" /> */}
+              </div>
+
             </>
           ) : (
             <>
@@ -43,7 +47,7 @@ const Hamburger = () => {
               <h1 className='txt-hamburger-icon'>Pronostico</h1>
             </a>
 
-            <a href="/statistics" className="hover-hamburger pronostico-hamburger">
+            <a href="/statistics" className="hover-hamburger statistic-hamburger">
               <img src="src\assets\estadistica-logo.svg" alt="Estadistica Icon" className="image statistic" />
               <h1 className='txt-hamburger-icon'>Estadistica</h1>
             </a>

@@ -15,7 +15,10 @@ const Hamburger3 = () => {
         <button className={`menu-toggle3 ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
           {isOpen ? (
             <>
-              <img src="src\assets\mac-login-white.png" alt="Menu Open" className="mac-icon-home3" />
+              <div className="images-header-hamb">
+                <img src="src\assets\close.svg" alt="Menu Open" className="close" />
+                {/* <img src="src\assets\mac-login-white.png" alt="Menu Open" className="mac-icon-home" /> */}
+              </div>
             </>
           ) : (
             <>

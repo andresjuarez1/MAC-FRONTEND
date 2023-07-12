@@ -51,7 +51,7 @@ const Statistics = () => {
 
                 <div className="footer-statistics">
                     <button className="print" onClick={handlePrint}>
-                        Imprimir
+                        Generar PDF
                     </button>
                 </div>
             </div>

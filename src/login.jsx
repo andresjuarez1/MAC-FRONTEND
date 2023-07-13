@@ -1,6 +1,6 @@
 import React from 'react'
 import MAC from './assets/mac-login.png'
-import Image from './assets/image-login-2.png'
+import Image from './assets/login2.jpg'
 import Line from './assets/line1.png'
 import './styles/login.css';
 import { axiosInstance } from './helpers/AxiosInstance';
@@ -80,7 +80,8 @@ function Login() {
                     <Link className='log-register' to='/register'>REGISTRATE</Link>
                 </div>
             </div>
-            <img src={Image} alt="" className='image-login-main' />
+            <div className="image-login-main"></div>
+            {/* <img src={Image} alt="" className='image-login-main' /> */}
         </div>
     )
 }

@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import React from 'react'
 import Macwhite from './assets/mac-login-white.png'
-import Image from './assets/image-login-2.png'
 import './styles/register.css';
 import { useForm } from 'react-hook-form'
 import Line from './assets/line-white.png'
@@ -48,7 +47,7 @@ function Register() {
                     <a className='register-login' href='/'>INICIA SESION</a>
                 </div>
             </div>
-            <img src={Image} alt="" className='image-login-main' />
+            <div className="image-register-main"></div>
         </div>
     )
 }

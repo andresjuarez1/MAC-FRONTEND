@@ -4,6 +4,7 @@ import Image from './assets/image-login-2.png'
 import Line from './assets/line1.png'
 import './styles/login.css';
 import { axiosInstance } from './helpers/AxiosInstance';
+import axios from 'axios';
 import { Link } from 'react-router-dom'
 import { useEffect, useState } from "react";
 
@@ -12,17 +13,17 @@ function Login() {
     const [password, setPassword] = useState('');
     const [error, setError] = useState(false);
 
-    useEffect(() => {
-        axiosInstance 
-        .get('http://192.168.100.195:9000/users')
-          .then(({ data }) => {
-            console.log(data.message);
-            setUsers(data.message);
-          })
-          .catch(err => {
-            console.log(err.message);
-          });
-      }, []);
+    // useEffect(() => {
+    //     axiosInstance 
+    //     .get('http://192.168.100.195:9000/users')
+    //       .then(({ data }) => {
+    //         console.log(data.message);
+    //         setUsers(data.message);
+    //       })
+    //       .catch(err => {
+    //         console.log(err.message);
+    //       });
+    //   }, []);
 
     return (
         <div className='container-login'>

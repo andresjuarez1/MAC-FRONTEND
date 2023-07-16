@@ -9,6 +9,7 @@ import Pronostico from './pronostico'
 import Statistics from './statistics'
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>

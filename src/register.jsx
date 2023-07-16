@@ -4,8 +4,28 @@ import Macwhite from './assets/mac-login-white.png'
 import './styles/register.css';
 import { useForm } from 'react-hook-form'
 import Line from './assets/line-white.png'
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios';
 
 function Register() {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+
+    function regHandler() {
+        axios.post("http://127.0.0.1:5050/createUser", { password: password, email: email })
+            .then((a) => {
+                console.log(a)
+                if (a.data === 'register Success') {
+                    navigate('/');
+                } else {
+                    alert('Ingresa una contraseña y usuario valido')
+                }
+            }).catch((e) => {
+                console.log(e)
+            })
+    }
+
     return (
         <div className='container-register'>
             <div className='left-part-register'>
@@ -16,29 +36,33 @@ function Register() {
                     <h2 className='h2-text-register'>"Emprende tu viaje a través del clima con WeatherSense"</h2>
                 </div>
 
-                {/* <form onSubmit={handleSubmit(onSubmit)}> */}
-                    <div className="input-register">
-                        <input type="email"
-                            // {...register('email', {
-                            //     required: true,
-                            //     maxLength: 10
-                            // })} 
-                            placeholder='Email' className='reg input-email-register' />
+                <div className="input-register">
+                    <input
+                        type="email"
+                        placeholder="Email"
+                        className="inp input-email"
+                        value={email}
+                        maxLength={20}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
 
-                        <input type="password"
-                            // {...register('pwd', {
-                            //     required: true,
-                            //     maxLength: 10
-                            // })} 
-                            placeholder='Contraseña' className='reg input-pwd-register' />
+                    <input
+                        type="password"
+                        placeholder="Contraseña"
+                        className="inp input-pwd"
+                        value={password}
+                        maxLength={20}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
 
-                        <img src={Line} alt="" className='line' />
+                    <img src={Line} alt="" className='line' />
 
-                        <div className="btn">
-                            <button type='submit' className='btn-register'>Register</button>
-                        </div>
+                    <div className="btn">
+                        <button className="btn-register" onClick={regHandler}>Ingresar</button>
                     </div>
-                {/* </form> */}
+                </div>
 
                 <img src={Line} alt="" className='line2' />
 

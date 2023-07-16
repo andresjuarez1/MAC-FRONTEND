@@ -1,29 +1,29 @@
 import React from 'react'
 import MAC from './assets/mac-login.png'
-import Image from './assets/login2.jpg'
 import Line from './assets/line1.png'
 import './styles/login.css';
-import { axiosInstance } from './helpers/AxiosInstance';
 import axios from 'axios';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useEffect, useState } from "react";
 
 function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [error, setError] = useState(false);
+    const navigate = useNavigate();
 
-    // useEffect(() => {
-    //     axiosInstance 
-    //     .get('http://192.168.100.195:9000/users')
-    //       .then(({ data }) => {
-    //         console.log(data.message);
-    //         setUsers(data.message);
-    //       })
-    //       .catch(err => {
-    //         console.log(err.message);
-    //       });
-    //   }, []);
+    function loginHandler() {
+        axios.post("http://127.0.0.1:5050/login", { password: password, email: email })
+            .then((a) => {
+                console.log(a)
+                if (a.data === 'login Success') {
+                    navigate('/home');
+                } else {
+                    alert('Ingresa una contraseña y usuario valido')
+                }
+            }).catch((e) => {
+                console.log(e)
+            })
+    }
 
     return (
         <div className='container-login'>
@@ -35,7 +35,6 @@ function Login() {
                     <h2 className='h2-text-login'>"Emprende tu viaje a través del clima con WeatherSense"</h2>
                 </div>
 
-                {/* <form onSubmit={handleSubmit(onSubmit)}> */}
                 <div className="input-login">
                     <div className="input-login">
                         <input
@@ -58,18 +57,11 @@ function Login() {
                         />
                     </div>
                 </div>
-                {/* </form> */}
 
                 <img src={Line} alt="" className='line' />
 
                 <div className="btn">
-                    {email === '' || password === '' || !email.includes('@') ? (
-                        <button className="btn-login" disabled>Ingresar</button>
-                    ) : (
-                        <Link className="btn-login" to="/home">
-                            Ingresar
-                        </Link>
-                    )}
+                    <button className="btn-login" onClick={loginHandler}>Ingresar</button>
                 </div>
 
 
@@ -81,7 +73,6 @@ function Login() {
                 </div>
             </div>
             <div className="image-login-main"></div>
-            {/* <img src={Image} alt="" className='image-login-main' /> */}
         </div>
     )
 }

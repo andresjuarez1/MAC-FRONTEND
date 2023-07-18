@@ -4,8 +4,8 @@ import dbcon
 import asyncio
 
 connection = dbcon.Connection()
-# connection.setup('18.208.99.204', 'mauricio', 'mauricio', 3306, 'users', 'weathersense')
-connection.setup('127.0.0.1', 'root', 'root', 3306, 'usuarios', 'weathersense2')
+connection.setup('18.208.99.204', 'mauricio', 'mauricio', 3306, 'users', 'weathersense', 'datasensors')
+# connection.setup('127.0.0.1', 'root', 'root', 3306, 'usuarios', 'weathersense2')
 
 loop=asyncio.get_event_loop()
 
@@ -44,6 +44,19 @@ def createUser():
         return ('register Success')
     else:
         return('failed register')
+
+
+# @app.route('/datasensors', methods=['POST'])
+# def datasensors():
+#     global connection, loop
+#     req3 = request.get_json()
+#     searchSensors = loop.run_until_complete(connection.datasensors(req3))
+
+#     if searchSensors:
+#         return ('search success')
+    
+#     else:
+#         return('failed search')
 
 if __name__ == '__main__':
     app.run(port=5050)

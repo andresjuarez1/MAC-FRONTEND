@@ -8,34 +8,36 @@ class Connection:
     isConnected = False
 
     # Table info
-    # table = "users"
-    # databaseName = "weathersense"
+    table = "users"
+    table2 = "datasensors"
+    databaseName = "weathersense"
 
     # Credentials
-    # host = "18.208.99.204"
-    # port = 3306
-    # user = "mauricio"
-    # password = "mauricio"
+    host = "18.208.99.204"
+    port = 3306
+    user = "mauricio"
+    password = "mauricio"
 
     #PRUEBA LOCAL
-    table = "usuarios"
-    databaseName = "weathersense2"
-    host = "127.0.0.1"
-    port = 3306
-    user = "root"
-    password = "root"
+    # table = "usuarios"
+    # databaseName = "weathersense2"
+    # host = "127.0.0.1"
+    # port = 3306
+    # user = "root"
+    # password = "root"
 
 
     def __init__(self) -> None:
         pass
 
-    def setup(self, host: str, user: str, password: str, port: int, table: str, databaseName: str):
+    def setup(self, host: str, user: str, password: str, port: int, table: str, databaseName: str, table2: str):
         self.host = host
         self.user = user
         self.port = port
         self.password = password
         self.table = table
         self.databaseName = databaseName
+        self.table2 = table2
         pass
 
     async def connect(self):
@@ -69,8 +71,8 @@ class Connection:
 
 
     async def login(self, data):
+        print (data)
         query = f'SELECT * FROM {self.databaseName}.{self.table} WHERE email = "{data["email"]}" and pwd = "{data["password"]}"'
-
         cursor = await self.connection.cursor()
         await cursor.execute(query)
         a = await cursor.fetchall()
@@ -82,6 +84,17 @@ class Connection:
         else:
             return False
         
+
+    # async def datasensors(self, dataSensors):
+    #     query =f'SELECT * FROM {self.databaseName}.{self.table2} WHERE id= "{dataSensors["id"]}"  and date = "{dataSensors["fecha"]}" and hour = "{dataSensors["hora"]}" and DHT11temperature = "{dataSensors["dht11"]}" and BMP180temperature = "{dataSensors["bmp180"]}" and humidity = "{dataSensors["humedad"]}" and pressurePA = "{dataSensors["presion-pascales"]}" and pressureATM = "{dataSensors["presion-atmosfera"]}" and altitude = "{dataSensors["altitud"]}" and co2level = "{dataSensors["contaminacion"]}"'
+    #     print(dataSensors)
+    #     cursor = await self.connection.cursor()
+    #     await cursor.execute(query)
+    #     d = await cursor.fetchall()
+    #     print(d)
+    #     await cursor.close()
+    #     print("Query buscado")
+
 # loop = asyncio.get_event_loop()
 
 # dbmanager = Connection()

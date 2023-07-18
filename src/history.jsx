@@ -7,7 +7,7 @@ const History = () => {
   return (
     <div className='history'>
       <div className="container-history">
-        <HomeIcon2/>
+        <HomeIcon2/>  
         <Hamburger2 />
         <h1 className="history-title">REGISTRO</h1>
         <div className="container-content">

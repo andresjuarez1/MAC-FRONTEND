@@ -17,6 +17,7 @@ function Register() {
             .then((a) => {
                 console.log(a)
                 if (a.data === 'register Success') {
+                    alert('Registro exitoso')
                     navigate('/');
                 } else {
                     alert('Ingresa una contraseña y usuario valido')

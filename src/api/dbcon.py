@@ -54,18 +54,18 @@ class Connection:
             return False
         
         query = f'INSERT INTO {self.databaseName}.{self.table} (email, pwd) VALUES ("{data["email"]}", "{data["password"]}")'
-        try:
-            cursor = await self.connection.cursor()
-            await cursor.execute(query)
-            r = await cursor.fetchall()
-            print(r)
-            await self.connection.commit()
-            await cursor.close()
-            print("Query success!")
-            return True
-        except:
-            print('No se completo el registro')
-            return False
+        # try:
+        cursor = await self.connection.cursor()
+        await cursor.execute(query)
+        r = await cursor.fetchall()
+        print(r)
+        await self.connection.commit()
+        await cursor.close()
+        print("Query success!")
+        return True
+        # except:
+        print('No se completo el registro')
+        return False
 
 
     async def login(self, data):

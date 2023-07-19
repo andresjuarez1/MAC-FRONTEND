@@ -53,34 +53,13 @@ def get_data_from_database():
 
 
 
-async def get_data_from_database2():
-    connection = mysql.connector.connect(**db_config)
-    cursor = connection.cursor()
-
-    try:
-        # Obtener los primeros 10 datos de "co2level"
-        cursor.execute("SELECT co2level FROM mytable ORDER BY id LIMIT 10")
-        data = cursor.fetchall()
-        return [row[0] for row in data]
-    except mysql.connector.Error as err:
-        print("Error al obtener datos de la base de datos:", err)
-        return []
-    finally:
-        cursor.close()
-        connection.close()
-
-
 async def websocket_handler(websocket, path):
     data = get_data_from_database()
-    data2 = get_data_from_database2()
 
     if data:
         data_json = json.dumps(data)
         await websocket.send(data_json)
 
-    if data2:
-            data_json = json.dumps(data2)
-            await websocket.send(data_json)
 
 host = "127.0.0.1"
 port = 8765

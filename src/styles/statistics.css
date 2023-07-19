@@ -24,10 +24,25 @@
     height: 120vh;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
         "n1 n2"
-        "n3 n4";
+        "n3 n3"
+        "n4 n4"
+        "n5 n5";
+}
+
+table td ul {
+    margin: 0;
+    padding: 0;
+}
+
+table td ul li {
+    margin-bottom: 4px;
+}
+
+.table-fre td .label {
+    font-weight: bold;
 }
 
 .txt-statistics {
@@ -36,7 +51,6 @@
 }
 
 .card-statistic {
-    height: 180vh;
     background-color: var(--card-color-statistic);
     border-radius: 10px;
     margin: 20px;
@@ -51,10 +65,44 @@
     justify-content: center;
 }
 
-.grafica-statistics{
+.grafica-statistics {
     margin: 20px auto;
     width: 450px;
     height: 230px;
+}
+
+.frecuencia-data {
+    height: 150vh;
+    grid-area: n1;
+}
+
+.dispersion-data {
+    grid-area: n2;
+    height: 150vh;
+}
+
+.correlacion {
+    grid-area: n3;
+    height: 20vh;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.tendencia-data {
+    width: 90%;
+    grid-area: n4;
+    height: 120vh;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.distribucion-frecuencia-data {
+    height: 190vh;
+    grid-area: n5;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .print {
@@ -69,9 +117,7 @@
     font-weight: 500;
 }
 
-.distribucion-frecuencia-data{
-    height: 480vh;
-}
+
 
 .print:hover {
     background-color: #433e8a;
@@ -82,13 +128,16 @@
     .print {
         display: none;
     }
-    .footer-statistic{
+
+    .footer-statistic {
         display: none;
     }
-    .title-statistics{
+
+    .title-statistics {
         left: 310px;
     }
-    .grafica-statistics{
+
+    .grafica-statistics {
         margin: 20px auto;
         width: 450px;
         height: 230px;

@@ -45,13 +45,13 @@ def calcular_frecuencia(datos):
 
 def calcular_medida_distribucion_frecuencia(frecuencia, total_datos):
     medidas = {}
-    medidas["Frecuencia Relativa"] = {dato: freq / total_datos for dato, freq in frecuencia.items()}
+    medidas["Frecuencia Relativa"] = {dato: round(freq / total_datos, 3) for dato, freq in frecuencia.items()}
     medidas["Frecuencia Acumulada"] = {}
     acumulado = 0
     for dato, freq in sorted(frecuencia.items()):
         acumulado += freq
         medidas["Frecuencia Acumulada"][dato] = acumulado
-    medidas["Frecuencia Relativa Acumulada"] = {dato: acumulado / total_datos for dato, acumulado in medidas["Frecuencia Acumulada"].items()}
+    medidas["Frecuencia Relativa Acumulada"] = {dato: round(acumulado / total_datos, 3) for dato, acumulado in medidas["Frecuencia Acumulada"].items()}
     return medidas
 
 def imprimir_medidas_distribucion_frecuencia(columna, medidas):
@@ -60,7 +60,7 @@ def imprimir_medidas_distribucion_frecuencia(columna, medidas):
     for dato, freq in medidas["Frecuencia Relativa"].items():
         frec_acumulada = medidas["Frecuencia Acumulada"][dato]
         frec_rel_acumulada = medidas["Frecuencia Relativa Acumulada"][dato]
-        print(f"{dato}\t{freq}\t\t{freq:.4f}\t\t{frec_acumulada}\t\t{frec_rel_acumulada:.4f}")
+        print(f"{dato}\t{freq}\t\t{freq:.3f}\t\t{frec_acumulada}\t\t{frec_rel_acumulada:.3f}")
 
 def main():
     try:

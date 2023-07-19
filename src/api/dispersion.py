@@ -29,6 +29,7 @@ def obtener_datos_desde_bd(conexion):
         cursor.close()
         conexion.close()
 
+        # Transponer los datos
         datos_transpuestos = list(map(list, zip(*datos)))
 
         return datos_transpuestos

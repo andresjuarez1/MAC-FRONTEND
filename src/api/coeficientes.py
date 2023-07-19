@@ -1,5 +1,41 @@
+import mysql.connector
 import numpy as np
 from scipy.stats import spearmanr
+
+def conectar_base_datos():
+    config = {
+        'host': '18.208.99.204',
+        'user': 'mauricio',
+        'password': 'mauricio',
+        'database': 'weathersense',
+        'port': '3306' 
+    }
+
+    try:
+        conexion = mysql.connector.connect(**config)
+        return conexion
+
+    except mysql.connector.Error as error:
+        print("Error al conectarse a la base de datos:", error)
+        return None
+
+def obtener_datos_desde_bd(conexion):
+    try:
+        cursor = conexion.cursor()
+
+        consulta = "SELECT DHT11temperature, BMP180temperature, humidity, pressurePA, pressureATM, altitude, co2level FROM datasensors WHERE id BETWEEN 1 AND 10"
+        cursor.execute(consulta)
+
+        datos = cursor.fetchall()
+
+        cursor.close()
+        conexion.close()
+
+        return datos
+
+    except mysql.connector.Error as error:
+        print("Error al obtener los datos desde la base de datos:", error)
+        return None
 
 def calcular_coeficiente_pearson(x, y):
     n = len(x)
@@ -29,14 +65,16 @@ def imprimir_coeficientes_correlacion(pearson, spearman):
 
 def main():
     try:
-        n = int(input("Ingresa la cantidad de datos: "))
-        x = []
-        y = []
-        for i in range(n):
-            dato_x = float(input(f"Ingresa el dato x{i + 1}: "))
-            dato_y = float(input(f"Ingresa el dato y{i + 1}: "))
-            x.append(dato_x)
-            y.append(dato_y)
+        conexion = conectar_base_datos()
+        if not conexion:
+            return
+
+        datos = obtener_datos_desde_bd(conexion)
+        if not datos:
+            return
+
+        x = [dato[0] for dato in datos]
+        y = [dato[1] for dato in datos]
 
         coeficiente_pearson = calcular_coeficiente_pearson(x, y)
         coeficiente_spearman, _ = spearmanr(x, y)

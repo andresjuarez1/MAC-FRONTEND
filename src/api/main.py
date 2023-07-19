@@ -2,11 +2,12 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import dbcon
 import asyncio
+from scipy.stats import spearmanr
 from dispersion import conectar_base_datos, obtener_datos_desde_bd, calcular_media, calcular_varianza, calcular_desviacion_estandar, calcular_rango
 from tendencia import conectar_base_datos, obtener_datos_desde_bd, calcular_media, calcular_mediana, calcular_moda
 from frecuencia import conectar_base_datos, obtener_datos_desde_bd, calcular_frecuencia
-from distribucion import conectar_base_datos, obtener_datos_desde_bd, calcular_frecuencia, calcular_medida_distribucion_frecuencia
-
+from distribucion import conectar_base_datos, obtener_datos_desde_bd, calcular_frecuencia, calcular_medida_distribucion_frecuencia, calcular_medida_distribucion_frecuencia,imprimir_medidas_distribucion_frecuencia
+from coeficientes import conectar_base_datos, obtener_datos_desde_bd, calcular_coeficiente_pearson, imprimir_coeficientes_correlacion
 
 connection = dbcon.Connection()
 connection.setup('18.208.99.204', 'mauricio', 'mauricio', 3306, 'users', 'weathersense', 'datasensors')
@@ -49,7 +50,6 @@ def createUser():
     else:
         return('failed register')
 
-
 @app.route('/calcularMedidasDispersion', methods=['GET'])
 def calcular_medidas_dispersion():
     try:
@@ -65,14 +65,14 @@ def calcular_medidas_dispersion():
 
         resultados = {}
 
-        for i, columna in enumerate(columnas):
-            # Realiza los cálculos con los datos de la columna actual
-            media = calcular_media(datos[i])
-            varianza = calcular_varianza(datos[i], media)
-            desviacion_estandar = calcular_desviacion_estandar(varianza)
-            rango = calcular_rango(datos[i])
+        datos_transpuestos = list(map(list, zip(*datos)))  # Transponer los datos
 
-            # Agrupa los resultados en un diccionario
+        for i, columna in enumerate(columnas):
+            media = calcular_media(datos_transpuestos[i])
+            varianza = calcular_varianza(datos_transpuestos[i], media)
+            desviacion_estandar = calcular_desviacion_estandar(varianza)
+            rango = calcular_rango(datos_transpuestos[i])
+
             resultados[columna] = {
                 "media": media,
                 "varianza": varianza,
@@ -85,6 +85,7 @@ def calcular_medidas_dispersion():
 
     except ValueError:
         return jsonify({"error": "Ingresa solo valores numéricos válidos."})
+
 
 
 @app.route('/calcularMedidasTendencia', methods=['GET'])
@@ -102,12 +103,13 @@ def calcular_medidas_tendencia():
 
         resultados = {}
 
-        for i, columna in enumerate(columnas):
-            media = calcular_media(datos[i])
-            mediana = calcular_mediana(datos[i])
-            moda = calcular_moda(datos[i])
+        datos_transpuestos = list(map(list, zip(*datos)))  # Transponer los datos
 
-            # Agrupa los resultados en un diccionario
+        for i, columna in enumerate(columnas):
+            media = calcular_media(datos_transpuestos[i])
+            mediana = calcular_mediana(datos_transpuestos[i])
+            moda = calcular_moda(datos_transpuestos[i])
+
             resultados[columna] = {
                 "media": media,
                 "mediana": mediana,
@@ -119,6 +121,7 @@ def calcular_medidas_tendencia():
 
     except ValueError:
         return jsonify({"error": "Ingresa solo valores numéricos válidos."})
+
 
 
 @app.route('/calcularMedidasFrecuencia', methods=['GET'])
@@ -136,8 +139,10 @@ def calcular_medidas_frecuencia():
 
         resultados = {}
 
+        datos_transpuestos = list(map(list, zip(*datos)))  # Transponer los datos
+
         for i, columna in enumerate(columnas):
-            frecuencia = calcular_frecuencia(datos[i])
+            frecuencia = calcular_frecuencia(datos_transpuestos[i])
 
             resultados[columna] = frecuencia
 
@@ -149,7 +154,7 @@ def calcular_medidas_frecuencia():
 
 
 @app.route('/calcularMedidasDistribucionFrecuencia', methods=['GET'])
-def calcular_medidas_distribucion_frecuencia():
+def calcular_medidas_distribucion_frecuencia_route():
     try:
         conexion = conectar_base_datos()
         if not conexion:
@@ -163,15 +168,47 @@ def calcular_medidas_distribucion_frecuencia():
 
         resultados = {}
 
+        datos_transpuestos = list(map(list, zip(*datos)))  # Transponer los datos
+
         for i, columna in enumerate(columnas):
             # Realiza el cálculo de la frecuencia con los datos de la columna actual
-            frecuencia = calcular_frecuencia(datos[i])
-            medidas_distribucion = calcular_medida_distribucion_frecuencia(frecuencia, len(datos[i]))
+            frecuencia = calcular_frecuencia(datos_transpuestos[i])
+            medidas_distribucion = calcular_medida_distribucion_frecuencia(frecuencia, len(datos_transpuestos[i]))
 
             # Agrupa los resultados en un diccionario
             resultados[columna] = medidas_distribucion
 
         # Devuelve los resultados en formato JSON
+        return jsonify(resultados)
+
+    except ValueError:
+        return jsonify({"error": "Ingresa solo valores numéricos válidos."})
+
+
+
+
+@app.route('/calcularCoeficientesCorrelacion', methods=['GET'])
+def calcular_coeficientes_correlacion_route():
+    try:
+        conexion = conectar_base_datos()
+        if not conexion:
+            return jsonify({"error": "No se pudo conectar a la base de datos"})
+
+        datos = obtener_datos_desde_bd(conexion)
+        if not datos:
+            return jsonify({"error": "No se pudieron obtener los datos desde la base de datos"})
+
+        x = [dato[0] for dato in datos]
+        y = [dato[1] for dato in datos]
+
+        coeficiente_pearson = calcular_coeficiente_pearson(x, y)
+        coeficiente_spearman, _ = spearmanr(x, y)
+
+        resultados = {
+            "coeficiente_pearson": coeficiente_pearson,
+            "coeficiente_spearman": coeficiente_spearman
+        }
+
         return jsonify(resultados)
 
     except ValueError:

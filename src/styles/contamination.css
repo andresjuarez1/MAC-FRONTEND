@@ -52,7 +52,6 @@
 
 .right-part-contamination{
     width: 40%;
-    /* margin-right: 100px; */
     margin-top: 15px;
 }
 
@@ -63,19 +62,16 @@
 .graficas{
     margin: 20px auto;
     width: 80%;
-    height: 100vh;
+    height: 60vh;
     border-radius: 40px;
     background-color: var(--blue2-color);
     overflow: hidden;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 20px;
 }
 
 .grafica-1{
-    margin: 20px auto;
-    width: 450px;
-    height: 230px;
+    margin: 30px auto;
+    width: 550px;
+    height: 430px;
 }
 
 .grafica1-txt{
@@ -83,18 +79,6 @@
     margin-top: 20px;
 }
 
-.grafica2-txt{
-    text-align: center;
-    margin-top: 20px;
-}
-
-.grafica3-txt{
-    text-align: center;
-}
-
-.grafica4-txt{
-    text-align: center;
-}
 
 .footer-contamination{
     width: 700px;

@@ -41,10 +41,10 @@ const Hamburger2 = () => {
               <h1 className='txt-hamburger-icon'>Registro</h1>
             </a>
 
-            <a href="/pronostico" className="hover-hamburger pronostico-hamburger">
+            {/* <a href="/pronostico" className="hover-hamburger pronostico-hamburger">
               <img src="src/assets/pronostico-icon.svg" alt="Pronostico Icon" className="image" />
               <h1 className='txt-hamburger-icon'>Pronostico</h1>
-            </a>
+            </a> */}
 
             <a href="/statistics" className="hover-hamburger statistic-hamburger">
               <img src="src\assets\estadistica-logo.svg" alt="Estadistica Icon" className="image" />

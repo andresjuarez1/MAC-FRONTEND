@@ -10,7 +10,7 @@
     justify-content: space-around;
 }
 
-.viento{
+.calidad{
     width: 100px;
 }
 
@@ -22,19 +22,26 @@
     width: 100px;
 }
 
+.data-state-bar{
+    color: rgb(112, 119, 255);
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.state-bar-txt{
+    font-weight: 500;
+    font-size: .8em;
+    display: flex;
+    justify-content: center;
+    color: var(--main-color);
+}
+
 .viento-icon{
     height: 30px;
     width: 30px;
     display: flex;
     margin: 5px 40px;
-}
-
-.viento-txt{
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-    color: var(--main-color);
-    margin-top: 35px;
 }
 
 .humedad-icon{
@@ -45,25 +52,9 @@
     margin: 5px 40px;
 }
 
-.humedad-txt{
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-    color: var(--main-color);
-    margin-top: 35px;
-}
-
 .altura-icon{
     height: 30px;
     width: 30px;
     display: flex;
     margin: 5px 40px;
-}
-
-.altura-txt{
-    font-weight: 500;
-    display: flex;
-    justify-content: center;
-    color: var(--main-color);
-    margin-top: 35px;
 }

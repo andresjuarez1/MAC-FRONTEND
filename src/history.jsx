@@ -8,10 +8,9 @@ import { useEffect } from 'react';
 const History = () => {
   const [data, setData] = useState(null);
 
-
   useEffect(() => {
     // Establecer la conexión WebSocket en el cliente
-    const socket = new WebSocket("ws://192.168.0.20:8765");
+    const socket = new WebSocket("ws://127.0.0.1:8765");
 
     // Escuchar eventos de la conexión WebSocket
     socket.addEventListener("open", () => {
@@ -59,7 +58,7 @@ const History = () => {
 
                 <div className="ch1 card-history1">
                   <div className="temperature-cards-title">
-                    <h2 className="cards-title-header">26 de Junio</h2>
+                    <h2 className="cards-title-header">{data.date}</h2>
                   </div>
 
                   <div className="temperature-content-card">
@@ -75,7 +74,7 @@ const History = () => {
 
                 <div className="ch1 card-history2">
                   <div className="temperature-cards-title">
-                    <h2 className="cards-title-header">26 de Junio</h2>
+                    <h2 className="cards-title-header">{data.date}</h2>
                   </div>
 
                   <div className="temperature-content-card">
@@ -91,7 +90,7 @@ const History = () => {
 
                 <div className="ch1 card-history3">
                   <div className="temperature-cards-title">
-                    <h2 className="cards-title-header">26 de Junio</h2>
+                    <h2 className="cards-title-header">{data.date}</h2>
                   </div>
 
                   <div className="temperature-content-card">
@@ -107,7 +106,7 @@ const History = () => {
 
                 <div className="ch1 card-history4">
                   <div className="temperature-cards-title">
-                    <h2 className="cards-title-header">26 de Junio</h2>
+                    <h2 className="cards-title-header">{data.date}</h2>
                   </div>
 
                   <div className="temperature-content-card">
@@ -123,7 +122,7 @@ const History = () => {
 
                 <div className="ch1 card-history5">
                   <div className="temperature-cards-title">
-                    <h2 className="cards-title-header">26 de Junio</h2>
+                    <h2 className="cards-title-header">{data.date}</h2>
                   </div>
 
                   <div className="temperature-content-card">
@@ -139,7 +138,7 @@ const History = () => {
 
                 <div className="ch1 card-history6">
                   <div className="temperature-cards-title">
-                    <h2 className="cards-title-header">26 de Junio</h2>
+                    <h2 className="cards-title-header">{data.date}</h2>
                   </div>
 
                   <div className="temperature-content-card">

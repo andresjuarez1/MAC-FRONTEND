@@ -10,7 +10,7 @@ const Home = () => {
 
   useEffect(() => {
     // Establecer la conexión WebSocket en el cliente
-    const socket = new WebSocket("ws://192.168.0.20:8765");
+    const socket = new WebSocket("ws://localhost:8765");
 
     // Escuchar eventos de la conexión WebSocket
     socket.addEventListener("open", () => {
@@ -49,25 +49,25 @@ const Home = () => {
         <p>Esperando datos del servidor...</p>
       )}
 
-
-
       {data ? (
-
         <div>
           <div className="container-cards">
             <div className="cards">
               <div className="ch card">
                 <img src="src\assets\cloud-home.png" alt="" className='card-img' />
+                <h1 className="card-txt2">{data.DHT11temperature} °c</h1>
                 <h1 className="card-txt">{data.hour}</h1>
               </div>
 
               <div className="ch card">
                 <img src="src\assets\cloud-home.png" alt="" className='card-img' />
+                <h1 className="card-txt2">{data.DHT11temperature} °c</h1>
                 <h1 className="card-txt">{data.hour}</h1>
               </div>
 
               <div className="ch card">
                 <img src="src\assets\cloud-home.png" alt="" className='card-img' />
+                <h1 className="card-txt2">{data.DHT11temperature} °c</h1>
                 <h1 className="card-txt">{data.hour}</h1>
               </div>
             </div>
@@ -76,8 +76,6 @@ const Home = () => {
       ) : (
         <p>Esperando datos del servidor...</p>
       )}
-
-
 
     </div>
   );

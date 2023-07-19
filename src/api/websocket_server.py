@@ -19,7 +19,7 @@ def get_data_from_database():
         cursor = connection.cursor()
 
         # Realizar una consulta para obtener los datos (reemplaza 'nombre_de_tu_tabla' con el nombre correcto)
-        query = "SELECT * FROM datasensors WHERE id = 1"
+        query = "SELECT * FROM datasensors WHERE id = 83"
         cursor.execute(query)
 
         # Obtener los resultados de la consulta
@@ -51,23 +51,38 @@ def get_data_from_database():
         if connection.is_connected():
             connection.close()
 
+
+
+async def get_data_from_database2():
+    connection = mysql.connector.connect(**db_config)
+    cursor = connection.cursor()
+
+    try:
+        # Obtener los primeros 10 datos de "co2level"
+        cursor.execute("SELECT co2level FROM mytable ORDER BY id LIMIT 10")
+        data = cursor.fetchall()
+        return [row[0] for row in data]
+    except mysql.connector.Error as err:
+        print("Error al obtener datos de la base de datos:", err)
+        return []
+    finally:
+        cursor.close()
+        connection.close()
+
+
 async def websocket_handler(websocket, path):
-    while True:
-        # Obtener los datos de la base de datos MySQL
-        data = get_data_from_database()
+    data = get_data_from_database()
+    data2 = get_data_from_database2()
 
-        if data:
-            # Convertir el diccionario de datos a una cadena JSON
-            data_json = json.dumps(data)
+    if data:
+        data_json = json.dumps(data)
+        await websocket.send(data_json)
 
-            # Enviar los datos al cliente
+    if data2:
+            data_json = json.dumps(data2)
             await websocket.send(data_json)
 
-        # Esperar un tiempo antes de realizar la siguiente consulta (simulando actualizaciones de sensores)
-        await asyncio.sleep(5)
-
-# Configurar el servidor WebSocket en la dirección y puerto deseado
-host = "192.168.0.20"
+host = "127.0.0.1"
 port = 8765
 
 # Iniciar el servidor WebSocket

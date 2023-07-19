@@ -90,24 +90,24 @@ const Statistics = () => {
     };
 
     function formatData(data) {
-    let result = "";
+        let result = "";
 
-    for (const [key, value] of Object.entries(data)) {
-        result += `${key}:\n`;
+        for (const [key, value] of Object.entries(data)) {
+            result += `${key}:\n`;
 
-        if (typeof value === "object") {
-            for (const [subKey, subValue] of Object.entries(value)) {
-                result += `${subKey}: ${subValue}\n`;
+            if (typeof value === "object") {
+                for (const [subKey, subValue] of Object.entries(value)) {
+                    result += `${subKey}: ${subValue}\n`;
+                }
+            } else {
+                result += `${value}\n`;
             }
-        } else {
-            result += `${value}\n`;
+
+            result += "\n";
         }
 
-        result += "\n";
+        return result;
     }
-
-    return result;
-}
 
     return (
         <div>
@@ -204,9 +204,7 @@ const Statistics = () => {
                         </div>
                     </div>
 
-
-
-                    <div className="card-statistic correlacion">
+                    <div className="card-statistic2 correlacion">
                         <h2 className="txt-statistics">CORRELACIÓN</h2>
                         <div className="correlacion-statistics">
                             {pearson && (
@@ -223,22 +221,22 @@ const Statistics = () => {
                     </div>
                 </div>
 
-
-                {/* <div className="card-statistic media">
+                <div className="graficas-statistic">
+                    <div className="card-statistic media">
                         <h2 className="txt-statistics">MEDIA</h2>
                         <div className="grafica-statistics">
                             <LinesChart />
                         </div>
-                    </div> */}
+                    </div>
 
-                {/* <div className="card-statistic moda">
+                    {/* <div className="card-statistic moda">
                         <h2 className="txt-statistics">MODA</h2>
                         <div className="grafica-statistics">
                             <LinesChart />
                         </div>
                     </div> */}
 
-                {/* <div className="card-statistic mediana">
+                    {/* <div className="card-statistic mediana">
                         <h2 className="txt-statistics">MEDIANA</h2>
                         <div className="grafica-statistics">
                             <LinesChart />
@@ -251,6 +249,8 @@ const Statistics = () => {
                             <LinesChart />
                         </div>
                     </div> */}
+                </div>
+
             </div>
         </div>
     );

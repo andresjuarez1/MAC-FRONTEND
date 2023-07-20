@@ -9,10 +9,8 @@ const History = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    // Establecer la conexión WebSocket en el cliente
     const socket = new WebSocket("ws://127.0.0.1:8765");
 
-    // Escuchar eventos de la conexión WebSocket
     socket.addEventListener("open", () => {
       console.log("Conexión WebSocket establecida");
     });
@@ -66,8 +64,9 @@ const History = () => {
                       <img src="src\assets\cloud-home.png" alt="" className='cloud-cards-img' />
                     </div>
                     <div className="right-part-cards">
-                      <div className="temperature-card-txt">Máxima: 35°</div>
-                      {/* <div className="temperature-card-txt">Mínima: 15°</div> */}
+                      <div className="temperature-card-txt">
+                        <h2>{data.DHT11temperature}°C</h2>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -82,8 +81,9 @@ const History = () => {
                       <img src="src\assets\cloud-home.png" alt="" className='cloud-cards-img' />
                     </div>
                     <div className="right-part-cards">
-                      <div className="temperature-card-txt">Máxima: 35°</div>
-                      {/* <div className="temperature-card-txt">Mínima: 15°</div> */}
+                      <div className="temperature-card-txt">
+                        <h2>{data.DHT11temperature}°C</h2>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -98,8 +98,10 @@ const History = () => {
                       <img src="src\assets\cloud-home.png" alt="" className='cloud-cards-img' />
                     </div>
                     <div className="right-part-cards">
-                      <div className="temperature-card-txt">Máxima: 35°</div>
-                      {/* <div className="temperature-card-txt">Mínima: 15°</div> */}
+                      <div className="temperature-card-txt"></div>
+                      <div className="temperature-card-txt">
+                        <h2>{data.DHT11temperature}°C</h2>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -114,8 +116,9 @@ const History = () => {
                       <img src="src\assets\cloud-home.png" alt="" className='cloud-cards-img' />
                     </div>
                     <div className="right-part-cards">
-                      <div className="temperature-card-txt">Máxima: 35°</div>
-                      {/* <div className="temperature-card-txt">Mínima: 15°</div> */}
+                      <div className="temperature-card-txt">
+                        <h2>{data.DHT11temperature}°C</h2>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -130,8 +133,9 @@ const History = () => {
                       <img src="src\assets\cloud-home.png" alt="" className='cloud-cards-img' />
                     </div>
                     <div className="right-part-cards">
-                      <div className="temperature-card-txt">Máxima: 35°</div>
-                      {/* <div className="temperature-card-txt">Mínima: 15°</div> */}
+                      <div className="temperature-card-txt">
+                        <h2>{data.DHT11temperature}°C</h2>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -140,14 +144,14 @@ const History = () => {
                   <div className="temperature-cards-title">
                     <h2 className="cards-title-header">{data.date}</h2>
                   </div>
-
                   <div className="temperature-content-card">
                     <div className="left-part-cards">
                       <img src="src\assets\cloud-home.png" alt="" className='cloud-cards-img' />
                     </div>
                     <div className="right-part-cards">
-                      <div className="temperature-card-txt">Máxima: 35°</div>
-                      {/* <div className="temperature-card-txt">Mínima: 15°</div> */}
+                      <div className="temperature-card-txt">
+                        <h2>{data.DHT11temperature}°C</h2>
+                      </div>
                     </div>
                   </div>
                 </div>

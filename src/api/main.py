@@ -213,6 +213,37 @@ def calcular_coeficientes_correlacion_route():
 
     except ValueError:
         return jsonify({"error": "Ingresa solo valores numéricos válidos."})
+    
+
+@app.route('/datosGraficas', methods=['GET'])
+def datosGraficas():
+    try:
+        conexion = conectar_base_datos()
+        if not conexion:
+            return jsonify({"error": "No se pudo conectar a la base de datos"})
+
+        query = f"""
+            SELECT co2level, hour
+            FROM datasensors
+            WHERE id BETWEEN 1 AND 10
+            ORDER BY id ASC;
+        """
+        cursor = conexion.cursor()
+        cursor.execute(query)
+        data = cursor.fetchall()
+        cursor.close()
+        conexion.close()
+
+        column_names = ['co2level', 'hour']
+        results = []
+        for row in data:
+            results.append(dict(zip(column_names, row)))
+
+        return jsonify(results)
+
+    except Exception as e:
+        return jsonify({"error": f"Error al obtener los datos: {e}"})
+
 
 
 

@@ -2,33 +2,9 @@ import React, { useEffect } from 'react';
 import Hamburger3 from './components/hamburger-menu3';
 import HomeIcon from './components/icon-home';
 import './styles/contamination.css';
-import LinesChart from './components/linesChart';
-import { useState } from 'react';
+import { LineChart } from './components/linesChart';
 
 const Contamination = () => {
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    // Establecer la conexión WebSocket en el cliente
-    const socket = new WebSocket("ws://127.0.0.1:8765");
-
-    // Escuchar eventos de la conexión WebSocket
-    socket.addEventListener("open", () => {
-      console.log("Conexión WebSocket establecida");
-    });
-
-    socket.addEventListener("message", (event) => {
-      const parsedData = JSON.parse(event.data);
-      setData(parsedData);
-    });
-
-    socket.addEventListener("close", () => {
-      console.log("Conexión WebSocket cerrada");
-    });
-
-    // Limpiar la conexión WebSocket cuando el componente se desmonta
-    return () => socket.close();
-  }, []);
 
 
   return (
@@ -55,22 +31,19 @@ const Contamination = () => {
         </div>
 
       </div>
-      {data ? (
 
         <div className="graficas">
           <div className="grafica1-container">
             <div>
-              <h2 className='grafica1-txt'>{data.date}</h2>
+              <h2 className='grafica1-txt'>hola</h2>
               <div className="grafica-1">
-                <LinesChart />
+                <LineChart/>
               </div>
             </div>
           </div>
-
         </div>
-      ) : (
-        <p>Esperando datos del servidor...</p>
-      )}
+
+
       <div className="footer-contamination">
         <h2 className="txt-footer-contamination">EN CASO DE QUE LOS NIVELES DE CONTAMINACIÓN SEAN MUY ALTOS
           SE LANZARÁ UNA ALERTA</h2>

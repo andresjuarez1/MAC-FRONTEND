@@ -34,21 +34,21 @@ export const options = {
   },
 };
 
-const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
+const labels = ['9', '10', '11', '12', '13', '14', '15'];
 
 export const data = {
   labels,
   datasets: [
     {
-      label: 'Mandu 1',
-      data: [1, 6, 1, 4, 3, 3, 4],
+      label: 'CO2 LEVELS',
+      data: [179.69, 183, 188.33, 192.15, 184.78, 192.91, 193.42],
       backgroundColor: 'rgba(255, 99, 132, 0.5)',
     },
-    {
-      label: 'Dataset 2',
-      data: [1, 6, 10, 34, 53, 23, 4],
-      backgroundColor: 'rgba(53, 162, 235, 0.5)',
-    },
+    // {
+    //   label: 'Dataset 2',
+    //   data: [1, 6, 10, 34, 53, 23, 4],
+    //   backgroundColor: 'rgba(53, 162, 235, 0.5)',
+    // },
   ],
 };
 

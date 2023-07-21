@@ -107,6 +107,23 @@ table td ul li {
     margin-left: 350px;
 }
 
+.graficas-statistic{
+    background-color: var(--card-color-statistic);
+    width: 90%;
+    margin: 0 auto;
+    height: 60vh;
+    border-radius: 20px;
+}
+
+
+.graficas-statistic:hover{
+    background-color: var(--card-hover-color-statistic);
+}
+
+.card-statistic2:hover{
+    background-color: var(--card-hover-color-statistic);
+}
+
 .print {
     margin-top: 30px;
     margin-bottom: 20px;
@@ -118,8 +135,6 @@ table td ul li {
     cursor: pointer;
     font-weight: 500;
 }
-
-
 
 .print:hover {
     background-color: #433e8a;

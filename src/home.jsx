@@ -9,10 +9,8 @@ const Home = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    // Establecer la conexión WebSocket en el cliente
     const socket = new WebSocket("ws://localhost:8765");
 
-    // Escuchar eventos de la conexión WebSocket
     socket.addEventListener("open", () => {
       console.log("Conexión WebSocket establecida");
     });
@@ -26,7 +24,6 @@ const Home = () => {
       console.log("Conexión WebSocket cerrada");
     });
 
-    // Limpiar la conexión WebSocket cuando el componente se desmonta
     return () => socket.close();
   }, []);
 

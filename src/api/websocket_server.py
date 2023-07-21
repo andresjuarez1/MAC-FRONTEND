@@ -1,6 +1,5 @@
 import asyncio
 import websockets
-import random
 import json
 import mysql.connector
 
@@ -16,7 +15,7 @@ def get_data_from_database():
         connection = mysql.connector.connect(**db_config)
         cursor = connection.cursor()
 
-        query = "SELECT * FROM datasensors WHERE id = 83"
+        query = "SELECT * FROM datasensors WHERE id = 96"
         cursor.execute(query)
 
         result = cursor.fetchone()
@@ -47,63 +46,63 @@ def get_data_from_database():
             connection.close()
 
 
-def get_data_from_database_ids_1_to_10():
-    try:
-        connection = mysql.connector.connect(**db_config)
-        cursor = connection.cursor()
+# def get_data_from_database_ids_1_to_10():
+#     try:
+#         connection = mysql.connector.connect(**db_config)
+#         cursor = connection.cursor()
 
-        query = "SELECT * FROM datasensors WHERE id BETWEEN 1 AND 10"
-        cursor.execute(query)
+#         query = "SELECT * FROM datasensors WHERE id BETWEEN 1 AND 10"
+#         cursor.execute(query)
 
-        results = cursor.fetchall()
+#         results = cursor.fetchall()
 
-        cursor.close()
+#         cursor.close()
 
-        if results:
-            data = []
-            for result in results:
-                data.append({
-                    'date': str(result[1]),
-                    'hour': str(result[2]),
-                    'DHT11temperature': result[3],
-                    'BMP180temperature': result[4],
-                    'humidity': result[5],
-                    'pressurePA': result[6],
-                    'pressureATM': result[7],
-                    'altitude': result[8],
-                    'co2level': result[9],
-                })
-            return data
-        else:
-            return None
+#         if results:
+#             data = []
+#             for result in results:
+#                 data.append({
+#                     'date': str(result[1]),
+#                     'hour': str(result[2]),
+#                     'DHT11temperature': result[3],
+#                     'BMP180temperature': result[4],
+#                     'humidity': result[5],
+#                     'pressurePA': result[6],
+#                     'pressureATM': result[7],
+#                     'altitude': result[8],
+#                     'co2level': result[9],
+#                 })
+#             return data
+#         else:
+#             return None
 
-    except mysql.connector.Error as error:
-        print("Error al obtener datos de la base de datos:", error)
+#     except mysql.connector.Error as error:
+#         print("Error al obtener datos de la base de datos:", error)
 
-    finally:
-        if connection.is_connected():
-            connection.close()
+#     finally:
+#         if connection.is_connected():
+#             connection.close()
 
 
-
-# async def websocket_handler(websocket, path):
-#     data = get_data_from_database()
-#     if data:
-#         data_json = json.dumps(data)
-#         await websocket.send(data_json)
 
 async def websocket_handler(websocket, path):
-    while True:  
-        data = get_data_from_database()
-        data_ids_1_to_10 = get_data_from_database_ids_1_to_10()
-
-        combined_data = {
-            'id_83': data,
-            'ids_1_to_10': data_ids_1_to_10,
-        }
-
-        data_json = json.dumps(combined_data)
+    data = get_data_from_database()
+    if data:
+        data_json = json.dumps(data)
         await websocket.send(data_json)
+
+# async def websocket_handler(websocket, path):
+#     while True:  
+#         data = get_data_from_database()
+#         data_ids_1_to_10 = get_data_from_database_ids_1_to_10()
+
+#         combined_data = {
+#             'id_83': data,
+#             'ids_1_to_10': data_ids_1_to_10,
+#         }
+
+#         data_json = json.dumps(combined_data)
+#         await websocket.send(data_json)
 
 
 

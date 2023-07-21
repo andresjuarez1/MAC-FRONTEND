@@ -1,0 +1,25 @@
+:root{
+    --main-color: white;
+    --blue-color: #2d2a54;
+    --blue2-color: #d7d4ff;
+    --blue3-color: #4de9fd80;
+    --container-color: #3456ffb7;
+}
+
+.container-header-main{
+    width: 100%;
+    height: 8vh;
+    background-color: var(--main-color);
+    background-image: linear-gradient(to top, rgb(52, 48, 106) 0%, #2d2a54 100%);
+    position: fixed;
+}
+
+.header-image{
+    /* background-image: url(../assets/mac-login.png); */
+    background-image: url(../assets/mac-login-white.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 8vh;
+    margin: 0 auto;
+}

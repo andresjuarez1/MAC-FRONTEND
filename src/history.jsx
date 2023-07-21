@@ -1,6 +1,5 @@
 import React from 'react';
-import Hamburger2 from './components/hamburger-menu2';
-import HomeIcon2 from './components/icon-home-white';
+import Header from './components/header';
 import './styles/history.css';
 import { useState } from 'react';
 import { useEffect } from 'react';
@@ -31,10 +30,13 @@ const History = () => {
 
   return (
     <div className='history'>
+      <div className="header-main">
+        <Header />
+      </div>
       <div className="container-history">
-        <HomeIcon2 />
-        <Hamburger2 />
-        <h1 className="history-title">REGISTRO</h1>
+        <div className="container-title-history">
+          <p className="title-page-history">REGISTRO HISTORICO</p>
+        </div>
         {data ? (
           <div>
             <div className="container-content">
@@ -159,7 +161,7 @@ const History = () => {
             </div>
           </div>
         ) : (
-          <p>Esperando datos del servidor...</p>
+          console.log('Esperando datos del servidor...')
         )}
       </div>
     </div>

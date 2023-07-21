@@ -2,7 +2,7 @@ import React from "react";
 import "./styles/statistics.css";
 import Hamburger3 from "./components/hamburger-menu3";
 import IconHome from "./components/icon-home";
-// import LinesChart from "./components/linesChart";
+import { LineChart } from "./components/linesChart";
 import axios from "axios"; // Importar Axios
 import { useState, useEffect } from "react";
 import { LineChart2 } from './components/linesChart2';
@@ -221,9 +221,16 @@ const Statistics = () => {
                 </div>
 
                 <div className="graficas-statistic">
-                    <h2 className='grafica1-txt'>CO2 LEVEL</h2>
+                    <h2 className='grafica1-txt'>TEMPERATURA</h2>
                     <div className="grafica-1">
                         <LineChart2 />
+                    </div>
+                </div>
+
+                <div className="graficas-statistic">
+                    <h2 className='grafica1-txt'>CO2 LEVELS</h2>
+                    <div className="grafica-1">
+                        <LineChart />
                     </div>
                 </div>
 

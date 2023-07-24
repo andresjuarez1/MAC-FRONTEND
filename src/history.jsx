@@ -50,10 +50,7 @@ const History = () => {
                     <img src="src\assets\cloud-home.png" alt="" className='cloud-card-main' />
                     <h1 className="temperature-card-main">{data.DHT11temperature}</h1>
                   </div>
-                  {/* <div className="temperatura-footer">
-                    <h2 className="temperatura-main-footer">Máximo: 40°</h2>
-                    <h2 className="temperatura2-main-footer">Mínima: 25°</h2>
-                  </div> */}
+
                 </div>
 
                 <div className="ch1 card-history1">
@@ -67,7 +64,7 @@ const History = () => {
                     </div>
                     <div className="right-part-cards">
                       <div className="temperature-card-txt">
-                        <h2>{data.DHT11temperature}°C</h2>
+                        <h2 className="temperature-cards">{data.DHT11temperature}°C</h2>
                       </div>
                     </div>
                   </div>
@@ -84,7 +81,7 @@ const History = () => {
                     </div>
                     <div className="right-part-cards">
                       <div className="temperature-card-txt">
-                        <h2>{data.DHT11temperature}°C</h2>
+                        <h2 className="temperature-cards">{data.DHT11temperature}°C</h2>
                       </div>
                     </div>
                   </div>
@@ -102,7 +99,7 @@ const History = () => {
                     <div className="right-part-cards">
                       <div className="temperature-card-txt"></div>
                       <div className="temperature-card-txt">
-                        <h2>{data.DHT11temperature}°C</h2>
+                        <h2 className="temperature-cards">{data.DHT11temperature}°C</h2>
                       </div>
                     </div>
                   </div>
@@ -119,7 +116,7 @@ const History = () => {
                     </div>
                     <div className="right-part-cards">
                       <div className="temperature-card-txt">
-                        <h2>{data.DHT11temperature}°C</h2>
+                        <h2 className="temperature-cards">{data.DHT11temperature}°C</h2>
                       </div>
                     </div>
                   </div>
@@ -136,7 +133,7 @@ const History = () => {
                     </div>
                     <div className="right-part-cards">
                       <div className="temperature-card-txt">
-                        <h2>{data.DHT11temperature}°C</h2>
+                        <h2 className="temperature-cards">{data.DHT11temperature}°C</h2>
                       </div>
                     </div>
                   </div>
@@ -152,7 +149,7 @@ const History = () => {
                     </div>
                     <div className="right-part-cards">
                       <div className="temperature-card-txt">
-                        <h2>{data.DHT11temperature}°C</h2>
+                        <h2 className="temperature-cards">{data.DHT11temperature}°C</h2>
                       </div>
                     </div>
                   </div>

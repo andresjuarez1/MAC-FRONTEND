@@ -5,6 +5,7 @@ import IconHome from "./components/icon-home";
 import { LineChart } from "./components/linesChart";
 import axios from "axios"; // Importar Axios
 import { useState, useEffect } from "react";
+import Header from './components/header'
 import { LineChart2 } from './components/linesChart2';
 
 const Statistics = () => {
@@ -110,11 +111,13 @@ const Statistics = () => {
 
     return (
         <div>
+            <div className="header-main">
+                <Header />
+            </div>
+
             <div className="container-statistics">
                 <div className="header-statistics">
-                    <Hamburger3 />
-                    <IconHome />
-                    <h1 className="title-statistics">DATOS ESTADÍSTICOS</h1>
+                    <p className="title-statistics">ESTADISTICA</p>
                 </div>
 
                 <div className="print-part">
@@ -203,7 +206,7 @@ const Statistics = () => {
                         </div>
                     </div>
 
-                    <div className="card-statistic2 correlacion">
+                    <div className="card-statistic correlacion">
                         <h2 className="txt-statistics">CORRELACIÓN</h2>
                         <div className="correlacion-statistics">
                             {pearson && (
@@ -219,21 +222,23 @@ const Statistics = () => {
                         </div>
                     </div>
                 </div>
+                <h1 className="graficas-title-statistics">GRÁFICAS</h1>
 
-                <div className="graficas-statistic">
-                    <h2 className='grafica1-txt'>TEMPERATURA</h2>
-                    <div className="grafica-1">
-                        <LineChart2 />
+                <div className="graficas-container-statistics">
+                    <div className="graficas-statistic">
+                        <h2 className='grafica1-txt'>TEMPERATURA</h2>
+                        <div className="graficas-1">
+                            <LineChart2 />
+                        </div>
+                    </div>
+
+                    <div className="graficas-statistic">
+                        <h2 className='grafica1-txt'>CO2 LEVELS</h2>
+                        <div className="graficas-1">
+                            <LineChart />
+                        </div>
                     </div>
                 </div>
-
-                <div className="graficas-statistic">
-                    <h2 className='grafica1-txt'>CO2 LEVELS</h2>
-                    <div className="grafica-1">
-                        <LineChart />
-                    </div>
-                </div>
-
             </div>
         </div>
     );

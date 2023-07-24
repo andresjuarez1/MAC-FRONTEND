@@ -6,13 +6,14 @@ import HomeIconWhite from "./icon-home-white";
 const Header = () => {
     return (
         <>
-            <div className="container-header-main">
-                <div className="header-main">
-                    <div className="header-image"></div>
-                    <Hamburger />
-                    <HomeIconWhite />
+            <div className="p   ">
+                <div className="container-header-main">
+                    <div className="header-main">
+                        <div className="header-image"></div>
+                        <Hamburger />
+                        <HomeIconWhite />
+                    </div>
                 </div>
-
             </div>
         </>
     )

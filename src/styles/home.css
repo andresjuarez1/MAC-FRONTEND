@@ -46,7 +46,7 @@
 }
 
 .temperature-data-home{
-    color: var(--main-color);
+    color: #75B9BE;
     position: fixed;
     height: 70px;
     left: 620px;
@@ -80,7 +80,7 @@
 }
 
 .ch:hover{
-    background-color: #433f81af;
+    background-color: #2e2e2e;
     transition: .3s;
 }
 
@@ -88,7 +88,7 @@
     padding: 20px;
     width: 150px;
     height: 25vh;
-    background-color: var(--blue-color);
+    background-color: #000000a5;
     color: var(--main-color);
     border-radius: 60px;
     display: flex;

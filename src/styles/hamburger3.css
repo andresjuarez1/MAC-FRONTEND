@@ -34,7 +34,7 @@
     padding: 0;
     height: 10vh;
     width: 270px;
-    background-color: #2d2a54;
+    background-color: black;
 }
 
 .mac-icon-home3{
@@ -44,7 +44,7 @@
 }
 
 .bar3{
-    background-color: #2d2a54;
+    background-color: black;
     height: 3px;
     width: 100%;
 }
@@ -54,7 +54,7 @@
 }
 
 .menu3{
-    background-color: #2d2a54;
+    background-color: black;
     display: flex;
     flex-direction: column;
     width: 270px;

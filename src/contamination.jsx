@@ -22,7 +22,7 @@ const Contamination = () => {
             <div className="left-part-contamination">
               <h2 className='left-txt-contamination'>La zona que se está analizando se encuentra:</h2>
               <h1 className='left-txt-contamination2'>EN BUEN ESTADO</h1>
-              <h2 className='left-txt-contamination3'>Procura mantenerlo asi</h2>
+              <h2 className='left-txt-contamination'>Procura mantenerlo asi</h2>
             </div>
             <div className="right-part-contamination">
               <img src="src\assets\contamination-image.png" alt="" className='contamination-header-img' />

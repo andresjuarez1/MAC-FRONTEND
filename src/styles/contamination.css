@@ -1,9 +1,10 @@
 :root{
-    --main-color: white;
+    --main-color: rgba(255, 255, 255, 0.908);
     --blue-color: #2d2a54;
     --blue2-color: #d7d4ff;
     --blue3-color: #4de9fd80;
     --container-color: #3456ffb7;
+    --black-color: black;
 }
 
 .l{
@@ -34,11 +35,11 @@
 }
 
 .title-page{
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 600;
     color: var(--main-color);
-    margin-left: 260px;
-    margin-top: 15px;
+    margin-left: 420px;
+    margin-top: 30px;
 }
 
 .card-contamination{
@@ -46,8 +47,8 @@
     margin: 0 auto;
     width: 80%;
     height: 55vh;
-    border-radius: 50px;
-    background-color: var(--blue2-color);
+    border-radius: 30px;
+    background-color: #2e2e2e;
 }
 
 .left-part-contamination{
@@ -57,6 +58,7 @@
 
 .left-txt-contamination{
     margin-top: 30px;
+    color: white;
 }
 
 .left-txt-contamination2{
@@ -90,8 +92,8 @@
     margin: 20px auto;
     width: 80%;
     height: 60vh;
-    border-radius: 40px;
-    background-color: var(--blue2-color);
+    border-radius: 30px;
+    background-color: #2e2e2e;
     overflow: hidden;
 }
 
@@ -104,8 +106,8 @@
 .grafica1-txt{
     text-align: center;
     margin-top: 20px;
+    color: white;
 }
-
 
 .footer-contamination{
     width: 700px;

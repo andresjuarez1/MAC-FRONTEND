@@ -1,33 +1,60 @@
-:root {
-    --card-color-statistic: #d7d4ff;
-    --card-hover-color-statistic: #c6c2f8;
-}
-
 .container-statistics {
     width: 100%;
-    height: 100vh;
+    height: 540vh;
+    background-color: #2e2e2e;
 }
 
 .header-statistics {
     width: 100%;
     height: 10vh;
+    display: flex;
 }
 
-.title-statistics {
-    position: absolute;
-    top: 20px;
-    left: 500px;
+.title-statistics{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 20px auto;
+    color: white;
+}
+
+.print-part {
+    display: flex;
+    justify-content: center;
+}
+
+.print {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    background-color: rgb(237, 237, 237);
+    border-radius: 20px;
+    color: black;
+    border: solid rgb(237, 237, 237);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.print:hover {
+    background-color: rgb(164, 164, 164);
+    border: solid rgb(164, 164, 164);
+    color: white;
+    transition: .3s;
 }
 
 .content-statistics {
-    width: 100%;
-    height: 400vh;
+    width: 90%;
+    height: 360vh;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #ededed;
+    border: 1px solid #ededed;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
         "n1 n2"
-        "n3 n4";
+        "n3 n4"
+        "n5 n4";
 }
 
 table td ul {
@@ -45,22 +72,17 @@ table td ul li {
 
 .txt-statistics {
     text-align: center;
-    margin-top: 15px;
+    margin-top: 20px;
 }
 
 .card-statistic {
-    background-color: var(--card-color-statistic);
+    background-color: #dddcdc;
     border-radius: 10px;
     margin: 20px;
 }
 
 .card-statistic:hover {
-    background-color: var(--card-hover-color-statistic);
-}
-
-.print-part {
-    display: flex;
-    justify-content: center;
+    background-color: #c6c5c5;
 }
 
 .grafica-statistics {
@@ -70,7 +92,6 @@ table td ul li {
 }
 
 .frecuencia-data {
-    height: 150vh;
     grid-area: n1;
 }
 
@@ -80,7 +101,7 @@ table td ul li {
 }
 
 .tendencia-data {
-    width: 90%;
+    width: 93%;
     grid-area: n3;
     height: 120vh;
     margin: 0 auto;
@@ -88,23 +109,35 @@ table td ul li {
 }
 
 .distribucion-frecuencia-data {
-    height: 190vh;
+    height: 195vh;
     grid-area: n4;
-    width: 90%;
+    width: 93%;
     margin: 0 auto;
-}
-
-.card-statistic2 {
-    background-color: var(--card-color-statistic);
-    border-radius: 10px;
 }
 
 .correlacion {
     height: 20vh;
-    width: 100%;
     text-align: center;
-    margin-top: 20px;
-    margin-left: 350px;
+    margin: 0 auto;
+    width: 93%;
+    grid-area: n5;
+}
+
+.card-statistic2:hover {
+    background-color: aqua;
+}
+
+.graficas-title-statistics{
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+}
+
+.graficas-container-statistics{
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #ededed;
 }
 
 .graficas-statistic{
@@ -115,6 +148,16 @@ table td ul li {
     border-radius: 20px;
 }
 
+.grafica1-txt{
+    padding: 20px;
+    color: black;
+}
+
+.graficas-1{
+    margin: 0 auto;
+    width: 550px;
+    height: 300px;
+}
 
 .graficas-statistic:hover{
     background-color: var(--card-hover-color-statistic);
@@ -122,23 +165,6 @@ table td ul li {
 
 .card-statistic2:hover{
     background-color: var(--card-hover-color-statistic);
-}
-
-.print {
-    margin-top: 30px;
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    background-color: #2d2a54;
-    border-radius: 20px;
-    color: white;
-    border: solid #2d2a54;
-    cursor: pointer;
-    font-weight: 500;
-}
-
-.print:hover {
-    background-color: #433e8a;
-    border: solid #433e8a;
 }
 
 @media print {

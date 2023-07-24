@@ -12,7 +12,7 @@
 }
 
 .menu-container2.open {
-    background-color: #2d2a54af;
+    background-color: rgba(0, 0, 0, 0.76);
 }
 
 .menu-toggle2 {
@@ -36,14 +36,13 @@
     margin: 0;
     padding: 0;
     width: 270px;
-    background-color: #2d2a54;
+    background-color: black;
     height: 10vh;
 }
 
 .mac-icon-home2{
     height: 50px;
     width: 200px;
-    /* background-color: #2d2a54af; */
     margin-top: 20px;
 }
 
@@ -58,7 +57,7 @@
 }
 
 .menu2 {
-    background-color: #2d2a54;
+    background-color: black;
     display: flex;
     flex-direction: column;
     width: 270px;

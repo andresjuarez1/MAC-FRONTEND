@@ -4,7 +4,7 @@
     height: 100px;
     left: 287px;
     top: 340px;
-    background: rgba(45, 42, 84, 0.77);
+    background-color: rgba(0, 0, 0, 0.622);
     border-radius: 60px;
     display: flex;
     justify-content: space-around;
@@ -23,7 +23,7 @@
 }
 
 .data-state-bar{
-    color: rgb(112, 119, 255);
+    color: #75B9BE;
     text-align: center;
     font-weight: 500;
     margin-bottom: 5px;

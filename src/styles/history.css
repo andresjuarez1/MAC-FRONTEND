@@ -9,7 +9,7 @@
     background-image: url(../assets/history-background.png);
     background-size: cover;
     width: 100%;
-    height: 100vh;
+    height: 110vh;
 }
 
 .container-history {
@@ -18,11 +18,16 @@
     height: 90vh;
 }
 
+.container-title-history{
+    width: 100%;
+    height: 10vh;
+}
+
 .title-page-history{
-    font-size: 50px;
+    font-size: 30px;
     font-weight: 600;
     color: var(--main-color);
-    margin-left: 350px;
+    margin-left: 490px;
     margin-top: 15px;
 }
 
@@ -32,13 +37,14 @@
     margin-top: 70px;
     overflow: hidden;
     position: absolute;
+    left: -10px;
 }
 
 .content-history {
     display: grid;
     width: 100%;
     height: 530px;
-    margin: 10px auto;
+    margin: 0 auto;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
@@ -48,7 +54,7 @@
 }
 
 .card-history-main {
-    background-color: var(--card-color);
+    background-color: #75B9BE ;
     grid-area: n1;
     margin: 10px 0px 0px 30px;
     border-radius: 30px;
@@ -106,12 +112,6 @@
     color: var(--main-color);
 }
 
-.card-history1 {
-    background-color: var(--card-color);
-    grid-area: n2;
-    margin: 10px 0px 0px 20px;
-    border-radius: 20px;
-}
 
 .cards-title-header {
     margin-top: 10px;
@@ -135,6 +135,10 @@
     width: 50%;
 }
 
+.temperature-cards{
+    color: var(--main-color);
+}
+
 .right-part-cards {
     width: 50%;
 }
@@ -147,49 +151,53 @@
 }
 
 .temperature-card-txt {
-    color: var(--main-color);
     font-size: 1.2em;
     font-weight: 500;
     margin-top: 15px;
 }
 
+.ch1{
+    background-color: rgba(0, 0, 0, 0.464);
+}
+
+.card-history1 {
+    grid-area: n2;
+    margin: 10px 0px 0px 20px;
+    border-radius: 20px;
+}
+
 .card-history2 {
-    background-color: var(--card-color);
     grid-area: n3;
     margin: 10px 10px 0px 20px;
     border-radius: 20px;
 }
 
 .card-history3 {
-    background-color: var(--card-color);
     grid-area: n4;
     margin: 10px 0px 0px 20px;
     border-radius: 20px;
 }
 
 .card-history4 {
-    background-color: var(--card-color);
     grid-area: n5;
     margin: 10px 10px 0px 20px;
     border-radius: 20px;
 }
 
 .card-history5 {
-    background-color: var(--card-color);
     grid-area: n6;
     margin: 10px 0px 0px 20px;
     border-radius: 20px;
 }
 
 .card-history6 {
-    background-color: var(--card-color);
     grid-area: n7;
     margin: 10px 10px 0px 20px;
     border-radius: 20px;
 }
 
 .ch1:hover {
-    background-color: var(--card-hover-color);
+    background-color: rgba(0, 0, 0, 0.774);
     transition: .5s;
 }
 

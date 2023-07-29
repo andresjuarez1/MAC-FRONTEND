@@ -27,7 +27,6 @@ const Statistics = () => {
         fetchData();
     }, []);
 
-    // Función para obtener las medidas de dispersión desde el servidor
     function getDispersionData() {
         axios
             .get("http://127.0.0.1:5050/calcularMedidasDispersion")
@@ -39,7 +38,6 @@ const Statistics = () => {
             });
     }
 
-    // Función para obtener las medidas de tendencia desde el servidor
     function getTendenciaData() {
         axios
             .get("http://127.0.0.1:5050/calcularMedidasTendencia")
@@ -51,7 +49,6 @@ const Statistics = () => {
             });
     }
 
-    // Función para obtener las medidas de frecuencia desde el servidor
     function getFrecuenciaData() {
         axios
             .get("http://127.0.0.1:5050/calcularMedidasFrecuencia")
@@ -63,7 +60,6 @@ const Statistics = () => {
             });
     }
 
-    // Función para obtener las medidas de distribución de frecuencia desde el servidor
     function getDistribucionFrecuenciaData() {
         axios
             .get("http://127.0.0.1:5050/calcularMedidasDistribucionFrecuencia")
@@ -74,7 +70,6 @@ const Statistics = () => {
                 console.log(error);
             });
     }
-
 
     const fetchData = () => {
         axios
@@ -102,10 +97,8 @@ const Statistics = () => {
             } else {
                 result += `${value}\n`;
             }
-
             result += "\n";
         }
-
         return result;
     }
 

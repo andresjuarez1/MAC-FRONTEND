@@ -11,14 +11,11 @@ from coeficientes import conectar_base_datos, obtener_datos_desde_bd, calcular_c
 
 connection = dbcon.Connection()
 connection.setup('18.208.99.204', 'mauricio', 'mauricio', 3306, 'users', 'weathersense', 'datasensors')
-
 loop=asyncio.get_event_loop()
-
 loop.run_until_complete(connection.connect())
 
 app = Flask(__name__)
 app.config['CORS_HEADERS'] = 'Content-Type'
-
 app = Flask(__name__)
 CORS(app)
 
@@ -87,7 +84,6 @@ def calcular_medidas_dispersion():
         return jsonify({"error": "Ingresa solo valores numéricos válidos."})
 
 
-
 @app.route('/calcularMedidasTendencia', methods=['GET'])
 def calcular_medidas_tendencia():
     try:
@@ -121,7 +117,6 @@ def calcular_medidas_tendencia():
 
     except ValueError:
         return jsonify({"error": "Ingresa solo valores numéricos válidos."})
-
 
 
 @app.route('/calcularMedidasFrecuencia', methods=['GET'])
@@ -171,11 +166,9 @@ def calcular_medidas_distribucion_frecuencia_route():
         datos_transpuestos = list(map(list, zip(*datos)))  # Transponer los datos
 
         for i, columna in enumerate(columnas):
-            # Realiza el cálculo de la frecuencia con los datos de la columna actual
             frecuencia = calcular_frecuencia(datos_transpuestos[i])
             medidas_distribucion = calcular_medida_distribucion_frecuencia(frecuencia, len(datos_transpuestos[i]))
 
-            # Agrupa los resultados en un diccionario
             resultados[columna] = medidas_distribucion
 
         # Devuelve los resultados en formato JSON
@@ -213,39 +206,66 @@ def calcular_coeficientes_correlacion_route():
 
     except ValueError:
         return jsonify({"error": "Ingresa solo valores numéricos válidos."})
-    
 
-@app.route('/datosGraficas', methods=['GET'])
-def datosGraficas():
+
+@app.route('/co2data', methods=['GET'])
+def get_co2_data():
     try:
         conexion = conectar_base_datos()
         if not conexion:
             return jsonify({"error": "No se pudo conectar a la base de datos"})
 
-        query = f"""
-            SELECT co2level, hour
-            FROM datasensors
-            WHERE id BETWEEN 1 AND 10
-            ORDER BY id ASC;
-        """
         cursor = conexion.cursor()
-        cursor.execute(query)
-        data = cursor.fetchall()
+        cursor.execute("SELECT hour, co2level FROM datasensors WHERE id BETWEEN 86 AND 96")
+        results = cursor.fetchall()
+
+        if not results:
+            return jsonify({"error": "No se encontraron datos con los IDs especificados"})
+
+        data = []
+        for result in results:
+            hour = result[0]
+            co2level = result[1]
+            hour_str = str(hour)
+            data.append({"hour": hour_str, "co2level": co2level})
+
         cursor.close()
         conexion.close()
 
-        column_names = ['co2level', 'hour']
-        results = []
-        for row in data:
-            results.append(dict(zip(column_names, row)))
+        return jsonify(data)
 
-        return jsonify(results)
+    except ValueError:
+        return jsonify({"error": "Ingresa solo valores numéricos válidos."})
+    
 
-    except Exception as e:
-        return jsonify({"error": f"Error al obtener los datos: {e}"})
+@app.route('/temperaturaGrafica', methods=['GET'])
+def get_temperature_data():
+    try:
+        conexion = conectar_base_datos()
+        if not conexion:
+            return jsonify({"error": "No se pudo conectar a la base de datos"})
 
+        cursor = conexion.cursor()
+        cursor.execute("SELECT hour, DHT11temperature FROM datasensors WHERE id BETWEEN 86 AND 96")
+        results = cursor.fetchall()
 
+        if not results:
+            return jsonify({"error": "No se encontraron datos con los IDs especificados"})
 
+        data = []
+        for result in results:
+            hour = result[0]
+            DHT11temperature = result[1]
+            hour_str = str(hour)
+            data.append({"hour": hour_str, "DHT11temperature": DHT11temperature})
+
+        cursor.close()
+        conexion.close()
+
+        return jsonify(data)
+
+    except ValueError:
+        return jsonify({"error": "Ingresa solo valores numéricos válidos."})
 
 if __name__ == '__main__':
     app.run(port=5050)

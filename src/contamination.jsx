@@ -35,8 +35,8 @@ const Contamination = () => {
           <div className="graficas">
             <div className="grafica1-container">
               <div>
-                <h2 className='grafica1-txt'>CO2 LEVEL</h2>
-                <div className="grafica-1">
+                <h2 className='grafica2-txt'>CO2 LEVEL</h2>
+                <div className="grafica-2">
                   <LineChart />
                 </div>
               </div>

@@ -115,7 +115,7 @@
 
 .hover-hamburger:hover {
     transition: .3s;
-    background-color: rgba(255, 255, 255, 0.465);
+    background-color: rgba(255, 255, 255, 0.202);
     padding: 10px;
 }
 

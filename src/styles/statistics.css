@@ -123,10 +123,6 @@ table td ul li {
     grid-area: n5;
 }
 
-.card-statistic2:hover {
-    background-color: aqua;
-}
-
 .graficas-title-statistics{
     text-align: center;
     margin-top: 50px;
